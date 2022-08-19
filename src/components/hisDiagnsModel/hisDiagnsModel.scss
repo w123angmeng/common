@@ -1,0 +1,97 @@
+.HisDiagnsModels {
+    font-size: 12px;
+    // height: 450px;
+    position: relative;
+    box-sizing: border-box;
+    &.isFromLeaveHeight {
+        height: 450px;
+        .hisDiagnsModelWrap {
+            height: 400px;
+        }
+    }
+
+    .hisDiagnsModelBtns {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+    }
+    .hisDiagnsModelWrap {
+        // height: 400px;
+        position: relative;
+        overflow-y: auto;
+    }
+
+    .diagnosFormContent {
+        display: flex;
+
+        .ellipsis {
+            /* 溢出隐藏 */
+            overflow: hidden;
+            /* 显示省略号 */
+            text-overflow: ellipsis;
+            /* 不换行 */
+            white-space: nowrap;
+        } 
+        .el-form-item--small.el-form-item {
+            margin-bottom: 12px;
+        }
+
+        .el-input--small .el-input__inner {
+            padding: 7px 8px;
+        }
+
+        .ciAddBtn,.ciDelBtn {
+            box-shadow: none;
+            margin:0;
+        }
+
+        .sdDiagnosisType {
+            .el-input {
+                width: 100px;
+            }
+        }
+
+        .diagnosisnamess {
+            .el-input,.el-select {
+                width: 240px !important;
+                .el-input__inner {
+                    width: 240px !important;
+                }
+            }
+            position: relative;
+            .specImgSvg {
+                width: 16px;
+                height: 16px;
+                position: absolute;
+                right:-30px;
+                top: 8px;
+                vertical-align: middle;
+            }
+        }
+
+        .sdDislvlInp {
+            width: 90px;
+            .el-input, .el-select {
+                width: 90px;
+            }
+        }
+
+        .supplement {
+            .el-input__inner {
+                width: 160px;
+            }
+        }
+    
+        .groupBtnCiDiagn {
+            img {
+                vertical-align: middle;
+                position: relative;
+                top:-2px
+            }
+        }
+    
+        .el-button+.el-button {
+            margin-left: -2px;
+        }
+    }
+}

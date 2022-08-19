@@ -1,0 +1,28 @@
+.elPopoverTmp {
+    // background-color: red;
+    .tempDialog{
+        .tempDialog_tit{
+            margin-bottom: 16px;
+        }
+        .tempDialog_con{
+            height: 32px;
+            display: flex;
+            .dividLineBd{
+                padding: 0 10px;
+                height: 32px;
+                line-height: 32px;
+            }
+            input{
+                width: 90px !important;
+                border: 1px solid #dbdbdb;
+                text-align: center;
+                border-radius: 4px;
+            }
+            .tempDialog_sel:first-child{
+                margin-right: 16px;
+            }
+        }
+    }
+
+}
+

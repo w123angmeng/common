@@ -1,0 +1,37 @@
+.testMergePipe_Box {
+    .mergePipeDialog {
+        .el-dialog{
+            margin-top: 0 !important;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .el-dialog__header {
+            padding: 16px 24px;
+            border-bottom: 1px solid #E8E8E8;
+        }
+    
+        .el-dialog__body {
+            height: 450px;
+            padding: 16px 24px !important;
+
+            .BChildrenBg {
+                td {
+                    background: #E3F2FD;
+                    border-bottom: 1px solid #E0E0E0; 
+                }
+            }
+
+            .el-table--border th, .el-table--border td {
+                border-right: 1px solid #E0E0E0; 
+            }
+        }
+        .dialog-footer {
+            .el-button {
+                width: 65px !important;
+                height: 34px !important;
+            }
+        }
+    }
+}

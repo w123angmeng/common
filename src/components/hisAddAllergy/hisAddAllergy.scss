@@ -1,0 +1,148 @@
+// .HisAddAllergy {
+  
+// }
+
+  // 过敏史弹窗
+  .addAllergyDialog {
+    .el-dialog {
+        height: 398px;
+        padding:0;
+        overflow: hidden;
+        position: relative;
+        margin-top:0!important;
+        top: 50%;
+        margin-top: -199px!important;
+    }
+    .addItemWarnTip{
+        color: #FAAD14;
+        position: absolute;
+        top: 22px;
+        left: 100px;
+    }
+    .el-dialog__header{
+        padding-left: 24px;
+        border-bottom: 1px solid #f0f0f0;
+    }
+
+    .el-dialog__body {
+        padding: 16px 24px 10px 24px;
+
+        .ellipsis {
+            /* 溢出隐藏 */
+            overflow: hidden;
+            /* 显示省略号 */
+            text-overflow: ellipsis;
+            /* 不换行 */
+            white-space: nowrap;
+        }
+
+        .el-table::before {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 0px !important;
+        }
+
+        .el-table__body-wrapper::-webkit-scrollbar {
+            /*滚动条整体样式*/
+            width: 6px;
+            height: 6px;
+        }
+        .el-table__body-wrapper::-webkit-scrollbar-thumb {
+            /*滚动条里面小方块*/
+            border-radius: 5px;
+            background: rgba(80, 79, 79, 0.2);
+        }
+
+        .allergyFormContent {
+            margin-top: 20px;
+        }
+
+        .el-form-item--small .el-form-item__error {
+            display: inline-block;
+            width: 150px;
+        }
+
+        .el-form-item__error {
+            left: 10px;
+        }
+
+        .requiredStr {
+            display: inline-block;
+            width: 8px;
+            font-size: 14px;
+            color: #F56C6C;
+            padding: 0 8px;
+            padding-left: 0px;
+            box-sizing: border-box;
+        } 
+
+        .scopeallergyName {
+            width: 100%;
+            /* 溢出隐藏 */
+            overflow: hidden;
+            /* 显示省略号 */
+            text-overflow: ellipsis;
+            /* 不换行 */
+            white-space: nowrap;
+        }
+
+        .allergyFormList {
+            display: flex;
+            .el-input {
+                width: 118px;
+                .el-input__inner {
+                    width: 100%;
+                    padding: 0 5px;
+                     /* 溢出隐藏 */
+                    overflow: hidden;
+                    /* 显示省略号 */
+                    text-overflow: ellipsis;
+                    /* 不换行 */
+                    white-space: nowrap;
+                }
+            }
+
+            .el-icon-date {
+                display: none;
+            }
+
+            .allergyReaction {
+                .el-input {
+                    width: 224px;
+                }
+            }
+
+            .alleryRadioGroup {
+                .el-radio-button__inner {
+                    background: #FAFAFA;
+                    color: #8C8C8C;
+                    padding: 9px 10px;
+                }
+                .el-radio-button__orig-radio:checked + .el-radio-button__inner {
+                    color: #1890FF;
+                    background-color: #fff;
+                    border-color: #1890FF;
+                    -webkit-box-shadow: -1px 0 0 0 #1890ff;
+                    box-shadow: -1px 0 0 0 #1890ff;
+                }
+            }
+
+            .allergyFormLeft {
+                margin-right: 14px;
+            }
+
+            .allergyNamess {
+                width: 240px;
+                .el-input {
+                    width: 220px;
+                }
+            }
+        }
+    }
+
+    .el-dialog__footer {
+        padding: 0px 20px 20px;
+        text-align: right;
+    }
+}

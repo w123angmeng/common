@@ -1,0 +1,106 @@
+.tempBaseConfig{
+    .tempComInTop{
+        padding-left: 10px;
+        .tempComInForm{
+            display: flex;
+            .el-form-item{
+                display: flex;
+            }
+            .tempComInp{
+                width: 150px;
+                margin-right: 12px;
+            }
+            .tempComSel{
+                width: 220px;
+            }
+            
+        }
+    }
+    .headerItemWrap{
+        margin-bottom: 8px;
+        .fz14{
+            font-size: 14px;
+        }
+        .cle9e9e9{
+            color: #E9E9E9;
+        }
+        .headerItemTit{
+            .requiredTip::before{
+                content: '*';
+                color: #F56C6C;
+                margin-right: 4px;
+            }
+            line-height: 32px;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        .span-ellipsis {
+            width: 100%;
+             /* 溢出隐藏 */
+            overflow: hidden;
+            /* 显示省略号 */
+            text-overflow: ellipsis;
+            /* 不换行 */
+            white-space: nowrap;
+            display: block;
+        }
+        .itemConTable {
+            .el-form-item{
+                margin-bottom: 0 !important;
+            }
+            .newRow {
+                .el-input--small .el-input__inner{
+                    text-align: center;
+                    border: 1px solid #1890FF;
+                    &:focus{
+                        &+.el-input__suffix{
+                            display: block;
+                        }
+                        &+.el-select__caret{
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .el-input--small .el-input__inner{
+                border: none;
+                text-align: center;
+                &+.el-input__suffix{
+                    display: none;
+                }
+                &:focus{
+                    border: 1px solid #1890FF;
+                }
+            }
+            .el-input.is-focus .el-input__inner{
+                border: 1px solid #1890FF;
+                &+.el-input__suffix{
+                    display: block;
+                }
+            }
+            .el-form-item.is-error .el-input__inner, .el-form-item.is-error .el-input__inner:focus{
+                border-color: #F56C6C;
+            }
+            .el-input--suffix .el-input__inner{
+                padding: 0 !important;
+            }
+            /*滚动条样式*/
+            .el-table__body-wrapper::-webkit-scrollbar {/*滚动条整体样式*/
+                width: 6px;     
+                height: 6px;
+            }
+            .el-table__body-wrapper::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+                border-radius: 5px;
+                background: rgba(80, 79, 79, 0.2);
+            }
+            
+        }
+    }
+}
+.tempComInBtn{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
+

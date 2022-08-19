@@ -1,0 +1,29 @@
+.CancelAppointDialogs {
+    .el-dialog {
+        height: 195px;
+    }
+    .el-dialog__header {
+        padding: 0px 0px 0px 20px;
+        height: 54px;
+        line-height: 54px;
+        font-size:16px;
+        font-family:PingFangSC-Medium,PingFang SC;
+        font-weight:500;
+        color:rgba(0,0,0,0.85);
+        border-bottom: 1px solid #E8E8E8;
+        
+    }
+    .el-dialog__body {
+        padding: 15px;
+
+        .noteCancelStr {
+            width: 331px;
+            padding-left: 5px;
+        }
+
+        .cancelAppointBtns {
+            text-align: right;
+            padding-top: 40px;
+        }
+    }
+}

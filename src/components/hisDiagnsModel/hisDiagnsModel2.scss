@@ -1,0 +1,146 @@
+.HisDiagnsModel2 {
+    padding-left: 14px;
+    font-size: 12px;
+    position: relative;
+    .el-table::before{
+        height: 0;
+    }
+    .el-form-item__content {
+        margin-bottom: 0px;
+    }
+    .el-select-dropdown__item {
+        font-size: 12px;
+    }  
+    .el-autocomplete-suggestion .el-popper {
+        font-size: 12px !important;
+    }
+    .clear {
+        clear: both;
+    }
+    .sdDiagnosisType {
+         .el-input {
+            width: 125px !important;
+            font-size: 12px;
+        }
+    }
+
+    .diagnosisStdCode {
+        .el-input {
+           width: 100px !important;
+           font-size: 12px;
+       }
+   }
+
+    .el-input--small .el-input__inner {
+        height: 28px;
+        line-height: 28px;
+    }
+
+    .el-form-item--small .el-form-item__error {
+        padding-top: 0px;
+    }
+
+    .diagnosisname {
+        .el-input {
+            width: 240px !important;
+            font-size: 12px;
+        }
+        .el-input--small .el-input__inner {
+            padding-right: 20px;
+            width: 243px;
+            /* 溢出隐藏 */
+            overflow: hidden;
+            /* 显示省略号 */
+            text-overflow: ellipsis;
+            /* 不换行 */
+            white-space: nowrap;
+        }
+
+        position: relative;
+        .specImgSvg {
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            right:-30px;
+            top: 8px;
+            vertical-align: middle;
+        }
+    }
+
+    .supplement {
+        .el-input__inner {
+            width: 160px;
+            /* 溢出隐藏 */
+            overflow: hidden;
+            /* 显示省略号 */
+            text-overflow: ellipsis;
+            /* 不换行 */
+            white-space: nowrap;
+        }
+    }
+
+    
+    .isCheck {
+        margin-left: 20px;
+        margin-right: 55px;
+        font-size: 12px;
+        vertical-align: middle;
+    }
+
+
+    .groupBtnCiDiagn {
+        img {
+            vertical-align: middle;
+            position: relative;
+            top:-5px
+        }
+    }
+
+    .el-button+.el-button {
+        margin-left: 0px;
+    }
+
+    .hisDiagnsModelBtns {
+        margin-top: 50px;
+        text-align: right;
+    }
+
+    input[type=checkbox] {
+        width: 16px;
+        height: 16px;
+        margin-left: 35px;
+    }
+    input[type=checkbox] {
+        margin-right: 5px;
+        cursor: pointer;
+        font-size: 14px;
+        width: 0px;
+        height: 12px;
+        position: relative;
+    }
+    input[type=checkbox]:after {
+        position: absolute;
+        width: 10px;
+        height: 15px;
+        top: 0;
+        left: -7px;
+        content: " ";
+        background-color: #fff;
+        border: 1px solid #dcdfe6;
+        color: #000;
+        display: inline-block;
+        visibility: visible;
+        padding: 0px 3px;
+        border-radius: 50%;
+    }
+    input[type=checkbox]:checked:after {
+        content: "•";
+        font-size: 25px;
+        text-align: center;
+        font-weight: bold;
+        line-height: 16px;
+        color: #a1a1a1;
+        padding-left: 4px;
+        margin-right: 24px;
+    }
+}

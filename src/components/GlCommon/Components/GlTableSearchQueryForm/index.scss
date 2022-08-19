@@ -1,0 +1,80 @@
+// 表格筛选条件得输入框、select框、时间框得宽度等样式
+.gl-table-search-queryForm .time .el-form-item__content{
+    width: 228px !important;
+}
+.gl-table-search-queryForm .el-input__icon {
+    height: 32px;
+    line-height: 32px;
+}
+.gl-table-search-queryForm .el-input {
+    /*width: 228px;*/
+    width: 228px;
+}
+.gl-table-search-queryForm .el-input .el-input__inner {
+    /*width: 228px;*/
+    width: 228px;
+    height: 32px;
+    line-height: 32px;
+}
+.gl-table-search-queryForm .el-select {
+    /*width: 228px;*/
+    width: 228px;
+}
+.gl-table-search-queryForm .el-select .el-input__inner {
+    /*width: 228px;*/
+    width: 228px;
+    height: 32px;
+    line-height: 32px;
+}
+.gl-table-search-queryForm .el-form-item--mini.el-form-item {
+    margin-bottom: 12px;
+    label{
+        line-height: 32px;
+    }
+}
+.gl-table-search-queryForm .el-range-editor.el-input__inner {
+    /*width: 228px;*/
+    width: 228px;
+    height: 32px;
+    * {
+        line-height: 24px;
+    }
+}
+.gl-table-search-queryForm .el-form-item__label {
+    color: #262626;
+}
+
+.gl-table-search-queryForm__form,.dom_pen{
+    position: relative;
+    .icon{
+        display: inline-block;
+        color: #1890ff;
+        cursor: pointer;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+}
+.dom_pen{
+    position: absolute;
+    bottom: 12px;
+    right: 0;
+    .icon{
+        margin-left: 10px;
+    }
+}
+.gl-table-search-queryForm__form .up{
+    height: 87px;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+    .icon{
+        position: absolute;
+        right: 0px;
+        bottom: 10px;
+    }
+}
+.gl-table-search-queryForm__form .up.el-form{
+    padding-right: 180px;
+}
+.gl-table-search-queryForm__form .down{
+    height: auto;
+}

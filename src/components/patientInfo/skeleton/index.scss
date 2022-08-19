@@ -1,0 +1,42 @@
+// 骨架屏
+.skeleton {
+    box-sizing: border-box;
+    display: flex;
+    & div {
+        box-sizing: border-box;
+    }
+    .skeleton {
+        width: 108px;
+    }
+    .row {
+        margin-bottom: 4px;
+    }
+    .item {
+        width: 80%;
+        height: 22px;
+        background-color:  #E0E0E0;
+    }
+    .item--s {
+        width: 22px;
+    }
+    .skeletonLeft {
+        width: 108px;
+        .item {
+            width: 66px;
+            height: 34px;
+        }
+    }
+    .skeletonRight {
+        width: 230px;
+        border-left: 1px solid #E8E8E8;
+        padding-left: 12px;
+        .row:nth-child(1) {
+            .item:nth-child(1) {
+                margin-right: 17px;
+            }
+            .item:nth-child(2) {
+                margin-right: 4px;
+            }
+        }
+    }
+}

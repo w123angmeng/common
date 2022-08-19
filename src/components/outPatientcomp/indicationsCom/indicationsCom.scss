@@ -1,0 +1,44 @@
+.indicationsCom {
+    //适应症弹窗
+    .IndicationsComDiaglog {
+        .el-dialog {
+            height: 480px;
+            // margin-top: 86px!important;
+            // position: absolute;
+            // right: 50px;
+        }
+
+        .el-dialog__header{
+            font-size:16px;
+            font-family:PingFangSC-Medium,PingFangSC;
+            font-weight:500;
+            color:rgba(0,0,0,0.85);
+            border-bottom: 1px solid #E9E9E9 !important;
+        }
+
+        .el-dialog__body{
+            padding-top: 10px;
+            height: 320px;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+
+        /*滚动条样式*/
+        .el-dialog__body::-webkit-scrollbar {/*滚动条整体样式*/
+            width: 6px;     
+            height: 6px;
+        }
+        .el-dialog__body::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+            border-radius: 5px;
+            background: rgba(80, 79, 79, 0.2);
+        }
+
+            
+        .el-dialog__footer {
+            text-align: right;
+            .el-button {
+                width: 65px;
+            }
+        }
+    }
+}

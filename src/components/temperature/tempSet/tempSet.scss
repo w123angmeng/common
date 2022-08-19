@@ -1,0 +1,40 @@
+.tempSetDiv{
+    width: 750px;
+    .el-dialog {
+        width: 750px;
+    }
+    .titleCla{
+        padding: 10px 0 10px 10px;
+        background: #ECEDF1;
+        margin-bottom: 32px;
+    }
+    .listBox{
+        width: 100%;
+        .wrapLine{
+            float: none;
+        }
+        .fontSizeCla{
+            font-size: 14px;
+        }
+        .el-input{
+            width:180px;
+            height: 30px;
+        }
+        .el-form-item__label{
+            text-align: left;
+            padding: 0;
+            margin-right: 25px;
+        }
+        .el-row{
+            padding-left: 30px
+        }
+       
+    }
+    .submitBtn{
+        float: right;
+        width: 90px;
+        height: 30px;
+        margin-right: 30px;
+        margin-bottom: 100px;
+    }
+}

@@ -1,0 +1,43 @@
+
+.checkReportTpml{
+    height: 100%;
+    position: relative;
+    .reportContent{
+        position: relative;
+        padding: 0 16px;
+        box-sizing: border-box;
+        overflow: auto;
+        flex: 1;
+        line-height: 22px;
+        .abnormalImg{
+            font-size: 50px;
+            line-height: 50px;
+            padding-left: 20px;
+            color: rgba(191, 191, 191, 1);
+            &.isAbnormal{
+                color: #FFD0D2;
+            }
+        }
+    }
+    .currReportLi{
+        line-height: 22px;
+        padding-top: 8px;
+        font-size: 14px;
+        .reportLabel{
+            color: rgba(38, 38, 38, 1);
+            font-weight: 700;
+            width: 70px;
+        }
+        .reportCont{
+            flex: 1;
+            color: #595959;
+        }
+    }
+    .currReportBottom{
+        padding-top: 16px;
+    }
+    .fnArea{
+        text-align: right;
+    }
+}
+

@@ -1,0 +1,99 @@
+.phySignMaintain{
+    // padding: 10px 20px;
+    .phySignHeader{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 27px;
+        font-size: 16px;
+        .cl1890FF{
+            color: #1890FF;
+        }
+        .curPot{
+            cursor: pointer;
+        }
+    }
+    .phySignForm{
+        .extend{
+            display: flex;
+            justify-content: space-between;
+            .phyFormLeft {
+                display: flex;
+                // width: 33%;
+                .phySignItemInp{
+                    width: 290px;
+                }
+                .phySignItemMini{
+                    width: 84px;
+                }
+                .serialNoCss{
+                    width: 206px;
+                }
+                .deptSeletCss{
+                    width: 246px;
+                    height: 32px;
+                }
+                .doubleItemMini{
+                    width:108px ;
+                }
+                // .posTopWrap{
+                //     position: relative;
+                //     .posTop{
+                //         position: absolute;
+                //         right: 0;
+                //         top: 0;
+                //     }
+                // }
+                // .el-select {
+                //     width: 100%;
+    
+                //     .el-input {
+                //         width: 100%;
+                //     }
+                // }
+                .el-radio, .el-checkbox__label{
+                    line-height: 32px;
+                }
+                .el-form-item--small.el-form-item {
+                    margin-bottom: 24px;
+                }
+        
+                .el-form-item--small .el-form-item__label {
+                    width: 60px;
+                    line-height: 32px;
+                    height: 32px;
+                    padding: 0;
+                    text-align: right;
+                    font-size: 14px;
+                    color: #000;
+                }
+        
+                .el-input__inner {
+                    height: 32px;
+                    line-height: 32px;
+                    padding-right: 4px;
+                    padding-left: 4px;
+                }
+        
+                // .el-input {
+                //     width: 710px;
+                //     line-height: 32px;
+                //     height: 32px;
+                // }
+        
+                .el-form-item__content {
+                    margin-left: 74px;
+                }
+                
+            }
+        }
+        .listForm{
+            .phySignSubmit{
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+    
+    
+}
+

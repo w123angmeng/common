@@ -1,0 +1,45 @@
+.checkInGCPModel {
+    .el-dialog {
+        min-height: 365px;
+    }
+
+    .el-dialog__header{
+        font-size:16px;
+        font-family:PingFangSC-Medium,PingFangSC;
+        font-weight:500;
+        color:rgba(0,0,0,0.85);
+        border-bottom: 1px solid #E9E9E9;
+    }
+
+    .el-dialog__body{
+        padding-top: 12px;
+
+        .gcptitle {
+
+            height: 32px;
+            line-height: 32px;
+            padding-left: 20px;
+            background: rgba(214, 224, 225, 0.59);
+            border-radius: 4px;
+            margin-bottom: 12px;
+            span {
+                padding-right: 40px;
+
+            }
+        }
+        .mainForm {
+            margin-top: 18px;
+            .el-form-item--small.el-form-item{
+                display: flex;
+            }
+        }
+
+        .short-input .el-input{
+            width: 120px;
+        }
+    }
+
+    .el-dialog__footer {
+        text-align: right;
+    }
+}

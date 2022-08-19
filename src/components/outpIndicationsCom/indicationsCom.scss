@@ -1,0 +1,85 @@
+.indicationsCom {
+    .IndicationInfo {
+        font-size: 14px;
+        height: 18px;
+        color: #606266;
+        margin-top: 5px;
+        overflow: hidden;
+        &.isFromBar {
+            margin-top: -2px;
+            .nameInfodetailed {
+                position: relative;
+                top: -7px !important;
+            }
+        }
+        .prPriceItemVsInsuranceVOList {
+            display: inline-block;
+            max-width: 490px;
+        }
+        
+        .nameInfodetailed {
+            position: relative;
+            top: -4px;
+        }
+        .detailed {
+            color: #1890FF;
+            cursor: pointer;
+        }
+        .hideDescription {
+            vertical-align: middle;
+        }
+
+        .ellipsis {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+    }
+    //适应症弹窗
+    .IndicationsComDiaglog {
+        .el-dialog {
+            height: 480px;
+        }
+
+        .el-dialog__header{
+            font-size:16px;
+            font-family:PingFangSC-Medium,PingFangSC;
+            font-weight:500;
+            color:rgba(0,0,0,0.85);
+            border-bottom: 1px solid #E9E9E9 !important;
+        }
+
+        .el-dialog__body{
+            padding-top: 10px;
+            height: 320px !important;
+            overflow: hidden;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        /*滚动条样式*/
+        .el-dialog__body::-webkit-scrollbar {/*滚动条整体样式*/
+            width: 6px;     
+            height: 6px;
+        }
+        .el-dialog__body::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+            border-radius: 5px;
+            background: rgba(80, 79, 79, 0.2);
+        }
+
+        .IndicationsBtns {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+        }
+
+            
+        .el-dialog__footer {
+            text-align: right;
+            padding: 0!important;
+            .el-button {
+                width: 65px;
+            }
+        }
+    }
+}

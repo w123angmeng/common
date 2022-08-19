@@ -1,0 +1,30 @@
+ .errorMsg {
+    .el-dialog__header {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+      margin-bottom: 20px;
+    }
+    .el-dialog__body {
+        height: 260px;
+        overflow-y: auto;
+        /*火狐下隐藏滚动条*/
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        padding-top: 0;
+        padding-bottom: 10px;
+        .messageList {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            .detailInfo {
+                color:  #409EFF;
+                cursor: pointer;
+            }
+        }
+        .noBorder {
+            border-bottom: none;
+        }
+    }
+    .el-dialog__body::-webkit-scrollbar {
+        width: 0;
+    }
+}

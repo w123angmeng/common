@@ -1,0 +1,33 @@
+.detailMsg {
+    .el-dialog__header {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+      margin-bottom: 20px;
+    }
+    .el-dialog__body {
+        height: 260px;
+        overflow-y: auto;
+        /*火狐下隐藏滚动条*/
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+        padding-top: 0;
+        padding-bottom: 10px;
+        .passMsg {
+            margin-bottom: 10px;
+        }
+        .el-table .expanded td:nth-child(1) .cell {
+            display: none;
+        }
+        .el-table__expanded-cell {
+            padding-left: 100px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            background-color: #FAFAFA;
+        }
+        .el-form-item {
+            margin-bottom: 0;
+        }
+    }
+     .el-dialog__body::-webkit-scrollbar {
+        width: 0;
+    }
+}

@@ -1,0 +1,126 @@
+.main {
+    padding-top: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    #temperatureTitlePrint{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .zoomOutOrIn{
+        height: 32px;
+        display: flex;
+        align-items: center;
+        // .perOrigin{
+        //     border: 1px solid #1890FF;
+        //     width: 20px;
+        //     line-height: 15px;
+        //     text-align: center;
+        //     height: 13px;
+        //     color: #1890FF;
+        //     // margin-left: 12px;
+        // }
+        .zoomIn, .zoomOut{
+            width: 18px;
+            height: 18px;
+            display: block;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .mr12{
+            margin-right: 12px;
+        }
+        .btnW{
+            width: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        // .iconFz{
+        //     font-size: 20px;
+        // }
+        // .perFz12{
+        //     font-size: 12px;
+        // }
+        .cl8c8c8c{
+            color: #8c8c8c;
+        }
+        .perCurBg{
+            background-color: #F5F5F5;
+        }
+        .perOrigin{ 
+            // width: 32px;
+            // height: 20px;
+            // line-height: 20px;
+            // text-align: center;
+            margin-left: 12px;
+            cursor: pointer;
+            .origin{
+                width: 24px;
+                height: 24px;
+                display: block;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            span{
+                // border: 1px solid #1890FF;
+                // line-height: 13px;
+                // text-align: center;
+                // height: 11px;
+                display: inline-block;
+                // color: #1890FF;
+            }
+        }
+    }
+    .dateBox {
+        margin-left: 36px;
+        float: left;
+        .tempDateSty{
+            width: 158px;
+            margin-right: 20px;
+        }
+    }
+
+    .btnBox {
+        float: right;
+        margin-right: 10px;
+    }
+
+    .iframeBox {
+        width: 100%;
+        overflow-y: auto;
+        position: relative;
+    }
+    /*滚动条样式*/
+    .iframeBox::-webkit-scrollbar {
+        width: 4px;
+    }
+    .iframeBox::-webkit-scrollbar-track {
+        border-radius: 10px;
+        box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        -webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    .title {
+        overflow: hidden;
+    }
+}
+
+.printHideCss {
+    display: none !important;
+}
+
+.iframeBoxTop {
+    margin-top: 50px;
+}
+
+.printContainer,
+.printAll {
+    display: none;
+}

@@ -1,0 +1,149 @@
+.OutpReportTpml{
+    .reportLeft{
+        border-right: 8px solid #eee;
+        padding: 0 16px;
+        padding-top: 12px;
+        width: 20%;
+        height: calc(100% - 12px);
+        &.bigSize{
+            width: 24%;
+        }
+        .selBox{
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 12px;
+            .searchSel{
+                flex: 1;
+                text-align: right;
+                .el-select{
+                    margin-left: 12px;
+                    .el-input--suffix{
+                        position: relative;
+                        .el-input__inner{
+                            padding-left: 15px;
+                            padding-right: 50px;
+                        }
+                    }
+                    .el-input__suffix{
+                        transform: translate(-80%);
+                    }
+                    .el-input__prefix{
+                        font-size: 14px;
+                        position: absolute;
+                        top: 50%;
+                        height: 32px;
+                        line-height: 32px;
+                        width: 20px;
+                        right: 9px;
+                        left: auto;
+                        transform: translate(0,-50%);
+                    }
+                }
+                .el-checkbox-group{
+                    padding-left: 6px;
+                    .el-checkbox{
+                        margin-right: 9px;
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }   
+    .nodata{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        text-align: center;
+        transform: translate(-50%,-50%);
+    }
+    overflow: hidden;
+    height: 100%;
+    font-size: 14px;
+    box-sizing: border-box;
+    .handle-item{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: baseline;
+        .radioBox{
+            margin-right: 16px;
+            line-height: 32px;
+        }
+    }
+    .spanEllipsis{
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        .spanEllipsisSpan{
+            flex: 1;
+            overflow: hidden;
+            position: relative;
+            // color: #262626;
+        }
+        .cont{
+            padding-right: 70px;
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis; 
+            -o-text-overflow: ellipsis;
+            white-space:nowrap;
+            &.noStatusDesc{
+                padding-right: 0;
+            }
+        }
+        .statusDesc{
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translate(0,-50%);
+        }
+    }
+    .doc-type{
+        float: left;
+        margin-right: 20px;
+    }
+    .el-checkbox__label{
+        margin-left: -5px;
+    }
+    .block{
+        overflow: hidden;
+    }
+    .box-right{
+        padding:16px;
+        position: relative;
+        flex: 3;
+        min-width: 520px;
+        box-sizing: border-box;
+        height: 100%;
+        overflow: auto;
+        .title{
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+            .check-report{
+                font-weight: bold;
+                i{
+                    font-style: normal;
+                    background: #409EFF;
+                    padding: 2px;
+                    color: #fff;
+                    border-radius: 4px;
+                    font-size: 12px;
+                }
+            }
+        }
+        .details{
+            margin-top: 15px;
+            span{
+                line-height: 1.5;
+            }
+            p{
+                color: #666;
+                line-height: 1.5;
+            };
+        }
+    }
+}

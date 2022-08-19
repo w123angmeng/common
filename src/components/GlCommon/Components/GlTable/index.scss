@@ -1,0 +1,190 @@
+#isTable {
+    @include mixinTableScrollbar;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    .el-table__fixed::before,
+    .el-table__fixed-right::before {
+        background-color: #e0e0e0;
+    }
+    .el-table__fixed,
+    .el-table__fixed-right {
+        // height: auto !important; // 让固定列的高自适应，且设置!important覆盖ele-ui的默认样式
+        // bottom: 15px !important; // 固定列默认设置了定位，    position: absolute;top: 0;left: 0;只需要再设置一下bottom的值，让固定列和父元素的底部出现距离即可 为滚动条宽度
+    }
+    .el-table--group,
+    .el-table--border {
+        &::before {
+            background-color: #e0e0e0;
+        }
+        border-color: #e0e0e0;
+    }
+    th,
+    td {
+        font-size: 14px;
+        padding: 4px 0;
+        border-right-color: #e0e0e0;
+        border-bottom-color: #e0e0e0;
+        .cell {
+            height: auto !important;
+            font-family: "PingFang SC";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 22px !important;
+            .el-button--text {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+    td {
+        .cell {
+            font-weight: 400;
+            color: #424242;
+        }
+    }
+    // th{
+    //     .cell{
+    //         height: auto !important;
+    //         font-family: 'PingFang SC';
+    //         font-style: normal;
+    //         font-weight: 500;
+    //         font-size: 14px;
+    //         line-height: 22px !important;
+    //     }
+    // }
+    // 选中行背景
+    .el-table__body tr.current-row > td {
+        background-color: #e3f2fd !important;
+    }
+    // 间隔表格灰色
+    .el-table__body tr.el-table__row--striped {
+        background-color: #fafafa !important;
+    }
+    // hover背景色
+    .el-table__body tr.hover-row,
+    .el-table__body .el-table__row.hover-row,
+    .el-table tbody tr:hover {
+        background-color: #e3f2fd !important;
+        position: relative;
+        //     &::after {
+        //         content: "";
+        //         width: calc(100% - 2px);
+        //         height: calc(100% - 2px);
+        //         z-index: 10;
+        //         position: absolute;
+        //         top: 0;
+        //         left: 0;
+        //         pointer-events: none;
+        //         border: 1px solid #2196F3 !important;
+        //    }
+        td {
+            background-color: #e3f2fd !important;
+            // border-bottom: 1px solid inset #2196F3 !important;
+            // border-top: 1px solid inset #2196F3 !important;
+            // &:first-child{
+            //     &::before{
+            //         content: '';
+            //         height: 100%;
+            //         width: 1px;
+            //         background-color: #2196F3;
+            //         display: block;
+            //         position: absolute;
+            //         top: 0;
+            //         right: left
+            //     }
+            //     // border-left:1px solid #2196F3 !important ;
+            // }
+            // &:last-child{
+            //     &::after{
+            //         content: '';
+            //         height: 100%;
+            //         width: 1px;
+            //         background-color: #2196F3;
+            //         display: block;
+            //         position: absolute;
+            //         top: 0;
+            //         right: 0
+            //     }
+            // }
+        }
+
+        // border-bottom: 1px solid #2196F3 !important;
+        // border-top: 1px solid #2196F3 !important;
+    }
+    // hover背景色
+    // .el-table tbody tr:hover td,.el-table tr:hover{
+    //     background-color: #E3F2FD !important;
+    //     &:first-child{
+    //         border-left:1px solid #2196F3 !important ;
+    //         border-bottom: 1px solid #2196F3 !important;
+    //         border-top: 1px solid #2196F3 !important;
+    //     }
+    //     &:last-child{
+    //         border-bottom: 1px solid #2196F3 !important;
+    //         border-top: 1px solid #2196F3 !important;
+    //         border-right:1px solid #2196F3 !important ;
+    //     }
+    //     border-bottom: 1px solid #2196F3 !important;
+    //     border-top: 1px solid #2196F3 !important;
+    // }
+
+    th {
+        background-color: #f0f2f5;
+        color: #212121;
+        padding: 4px 0;
+        font-size: 14px;
+        font-weight: 500;
+        border-right-color: #e0e0e0;
+        &:nth-last-of-type(2) {
+            // border-right-color: transparent;
+        }
+
+        // 表格投标，必填的红色*
+        &.th--required {
+            .cell::before {
+                content: "* ";
+                color: red;
+            }
+        }
+
+    }
+     //element表格，在表格出现滚动条的时候，发现线对不齐
+    .el-table__header-wrapper{
+        th.gutter{
+            display: block !important;
+            width: 16px !important;
+            background: #fff;
+            border: none;
+        }
+    }
+    .el-table__footer-wrapper{
+        th.gutter{
+            display: block !important;
+            width: 16px !important;
+            background: #fff;
+            border: none;
+        }
+    }
+    .el-table__body-wrapper{
+        // z-index: 2;
+    }
+    .el-table__body-wrapper::-webkit-scrollbar {
+        // width: 6px !important;
+        // height: 6px !important; // 纵向滚动条 必写
+    }
+    .gl-el-pagination {
+        display: flex;
+        justify-content: flex-end;
+        height: 50px;
+        align-items: center;
+        .el-pagination {
+            margin-right: 30px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+    }
+}

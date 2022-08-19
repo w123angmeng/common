@@ -1,0 +1,107 @@
+.outpTmplBarRightCont{
+    // position: relative;
+    padding-left:10px;
+    height: calc(100% - 120px);
+    .el-input-number.is-controls-right .el-input__inner{
+        padding: 0;
+    }
+    .doseSpan{
+        display: inline-block;
+        width: 25px;
+    }
+    .el-input-number{
+        width: 70%;
+        .el-input-number__decrease,.el-input-number__increase{
+            display: none;
+        }
+    }
+    .el-table {
+        height: 100%;
+        td{
+            // border-top:1px solid #EBEEF5;
+            // border-bottom:0;
+        }
+        .cell {
+            padding-right: 0;
+        }
+        .BChildrenBg {
+            td {
+                border-bottom: 1px solid #EBEEF5; 
+            }
+        }
+        .el-date-editor{
+            width: 100%;
+        }
+        .amountChange {
+            width:74px;
+            &.el-input-number--mini {
+                line-height: 22px;
+            }
+            .el-input__inner {
+                padding: 0 24px;
+                height: 24px;
+                line-height: 24px;
+            }
+            .el-input-number__decrease, .el-input-number__increase {
+                width: 22px;
+                height: 22px;
+                display: inline-block;
+            }
+        }
+    }
+    .el-table__row--level-1 {
+        background:#FAFAFA;
+        td{
+            border-bottom:0;
+            border-top:0;
+            .el-table__indent {
+                // padding-left:15px!important;
+                padding-left: 0!important;
+                padding-right:0!important;
+            }
+        }
+        // .el-table__row--level-1:last-child {
+        //     td {
+        //         border-bottom: 1px solid #EBEEF5; 
+        //     }
+        // }
+      }
+      .confrimQuote{
+        position: absolute!important;
+        bottom: 40px;
+        right: 10px;
+      }
+      .el-table__expand-icon{
+          display: none!important;
+      }
+      .el-table__placeholder{
+          width:auto;
+      }
+      .el-table__body-wrapper{
+          height:calc(100% - 125px);
+          overflow-y: auto;
+      }
+      /*滚动条样式*/
+    .el-table__body-wrapper::-webkit-scrollbar {
+        /*滚动条整体样式*/
+        width: 6px;
+        height: 6px;
+    }
+    .el-table::before{
+        height:0;
+    }
+    .el-table__body-wrapper::-webkit-scrollbar-thumb {
+        /*滚动条里面小方块*/
+        border-radius: 5px;
+        background: rgba(80, 79, 79, 0.2);
+    }
+}
+.myCell .el-checkbox__input {
+    display: none;
+  }
+.colorRed .cell{
+    color: #FF4949;
+}
+.el-tooltip__popper.is-dark{
+    max-width: 100%;
+}

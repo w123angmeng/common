@@ -1,0 +1,22 @@
+.ordersCancel{
+    .el-dialog{
+        width:645px;
+        height:274px;
+        .el-dialog__body{
+            padding:60px 0!important;
+            text-align: center;
+            font-size:18px;
+            color:#000;
+        }
+        .el-button{
+            width:90px;
+            height:30px;
+            border:1px solid #5280FE;
+            color:#5280FE;
+        }
+        .el-button--primary{
+            margin-top:0!important;
+            color:#fff;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+.leftTreeByProject {
+    position: relative;
+    box-sizing: border-box;
+    height: calc(100% - 54px);
+    overflow-y: scroll;
+    &.commonTree {
+        .el-tree-node__content{
+            .gray{
+                color: #ccc;
+            }
+        }
+        .is-current .el-tree-node__content{
+            .gray{
+                color: #1890ff;
+            }
+        }
+    }
+}

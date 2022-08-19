@@ -1,0 +1,278 @@
+.ClinicAppoint{
+    // 解决双击时出现蓝色背景
+    -moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+    padding: 16px 30px 30px 0px;
+            .appointContent {
+                color: #606266;
+                font-size: 14px;
+                display: flex;
+                .appointLf {
+                    width: 295px;
+                    padding: 0px 24px;
+                    box-sizing: border-box;
+                    border-right: 1px solid #E8E8E8;
+
+                    .labelTitle {
+                        padding-right: 10px;
+
+                    }
+                    .el-input {
+                        width: 203px;
+                        margin-bottom: 15px;
+                    }
+
+                    .numberAliasList {
+                        overflow-y: auto;
+                        .itemNumber {
+                            padding: 12px;
+                            margin-bottom: 12px;
+                            height: 76px;
+                            background: #F0F7FE;
+                            position: relative;
+                            box-sizing: border-box;
+
+                            .numberTitle {
+                                width: 175px !important;
+                                line-height: 27px;
+                                font-size:14px;
+                                font-family:PingFangSC-Medium,PingFang SC;
+                                font-weight:500;
+                                color:rgba(0,0,0,0.85);
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+
+                            .empTitle {
+                                width: 130px !important;
+                                line-height: 27px;
+                                font-size:14px;
+                                font-family:PingFangSC-Regular,PingFang SC;
+                                font-weight:400;
+                                color:rgba(0,0,0,0.65);
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+
+                        　  .title-ellipsis {
+                                display: inline-block;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+
+                            .itemPrice {
+                                position: absolute;
+                                right: 10px;
+                                top: 30px;
+                                font-size:18px;
+                                font-family:PingFangSC-Bold,PingFang SC;
+                                font-weight:bold;
+                                color:rgba(24,144,255,1);
+                            }
+                        }
+                        .itemNumber.curNumberTree {
+                            background: #C2DDFC;
+                        }
+                    }
+
+                    .numberAliasList::-webkit-scrollbar {
+                        width: 0;
+                    }
+                }
+
+                .appointRt {
+                    position: relative;
+                    padding-left: 26px;
+                    .closeDialog {
+                        position: absolute;
+                        bottom: 20px;
+                        right: 20px;
+                    }
+                    .contentData {
+                        // overflow: hidden;
+                        // margin-top:30px;
+                        position: relative;
+                        font-size:14px;
+                        font-weight:400;
+                        color:rgba(0,0,0,0.65);
+                        box-sizing: border-box;
+                        .fl {
+                            float: left;
+                            width:571px;
+                            overflow: hidden;
+                            overflow-y: auto;
+                            .appointList {
+                                cursor: pointer;
+                            }
+                            p{
+                                width: 571px;
+                                height: 44px;
+                                background: rgba(243,243,243,1);
+                                border-radius: 6px;
+                                line-height: 44px;
+                                padding-left:30px;
+                                box-sizing: border-box;
+                                margin-bottom: 8px;
+                                font-family:PingFangSC-Regular,PingFang SC;
+                                box-sizing: border-box;
+                                position: relative;
+                                span {
+                                    padding-right: 40px;
+                                }
+                                .date,.timeArea {
+                                    padding-right: 50px; 
+                                }
+                                .a_number,.a_noNumber {
+                                    position: absolute;
+                                    right: 0px;
+                                    display: inline-block;
+                                    text-align: center;
+                                    width:110px;
+                                    background:rgba(225,225,225,1);
+                                    padding-right: 0;
+                                    border-top-right-radius: 6px;
+                                    border-bottom-right-radius: 6px;
+                                    box-sizing: border-box;
+                                    // float:right;
+                                }
+                                .a_number {
+                                    background: #1890ff38;
+                                }
+                            }
+                            .noData {
+                                display: inline-block;
+                                width: 100%;
+                                text-align: center;
+                                padding-top: 50px;
+
+                            }
+                        }
+                        .fr {
+                            float: right;
+                            margin-left:26px;
+                            width:257px;
+                            border-radius:6px;
+                            border:1px solid rgba(232,232,232,1);
+                            .title {
+                                padding:12px 16px;
+                                box-sizing: border-box;
+                            }
+                            .recordList {
+                                height:360px;
+                                width: 100%;
+                                overflow-y: auto;
+                            }
+                            .record:first-child {
+                                padding-top:12px;
+                            }
+                            .record {
+                                padding:12px 16px;
+                                padding-top:0;
+                                box-sizing: border-box;
+                                background:rgba(243,243,243,1);
+                                position: relative;
+                                p {
+                                    padding-bottom:5px;
+                                }
+                                .line {
+                                    display: inline-block;
+                                    height: 1px;
+                                    width: 100%;
+                                    background: #e1e2e3;
+                                }
+                                // .printBtn {
+                                //     position: absolute;
+                                //     right: 50px;
+                                //     bottom: 32px;
+                                //     font-size: 14px;
+                                // }
+                                .cancel {
+                                    float: right;
+                                    padding: 0;
+                                    font-size: 14px;
+                                    position: relative;
+                                    top: -5px;
+                                }
+                            }
+                        }
+                        .fl::-webkit-scrollbar {
+                            width: 6px;
+                        }
+                        .fl::-webkit-scrollbar-thumb {
+                            /*滚动条里面小方块*/
+                            border-radius: 5px;
+                            background: rgba(80, 79, 79, 0.2);
+                        }
+                        .recordList::-webkit-scrollbar {
+                            width: 6px;
+                        }
+                        .recordList::-webkit-scrollbar-thumb {
+                            /*滚动条里面小方块*/
+                            border-radius: 5px;
+                            background: rgba(80, 79, 79, 0.2);
+                        }
+                    }
+                    .dtList {
+                        height: 111px; 
+                        // width: 100%;
+                        width: 845px;
+                        display: flex;
+                        .itmDt {
+                            width: 101px;
+                            margin-right: 15px;
+                            border-radius:6px;
+                            border:1px solid rgba(232,232,232,1);
+                            font-size:14px;
+                            font-family:PingFangSC-Regular,PingFang SC;
+                            font-weight:400;
+                            color:rgba(24,144,255,1);
+                            text-align: center;
+                            cursor: pointer;
+                           
+
+                            .weekDt,.daysDt {
+                                line-height: 36px;
+                                background: #F1F7FE;
+                            }
+
+                            .hasNum {
+                                line-height: 32px;
+                            }
+                        }
+
+                        .itmDt.curDayIndex {
+                            .weekDt,.daysDt {
+                                background: #C2DDFC;
+                            }
+                        }
+
+                        .itmDt.noNumDt, .itmDt.noNumDt.curDayIndex {
+                            color:rgba(0,0,0,0.45);
+
+                            .weekDt,.daysDt {
+                                background: #E8E8E8;
+                            }
+                        }
+                    }
+
+                    .dtPageList{
+                        font-size:14px;
+                        font-family:PingFangSC-Medium,PingFang SC;
+                        font-weight:500;
+                        line-height:38px;
+                        position: absolute;
+                        right: 0;
+
+                        .pageCur {
+                            color:rgba(0,0,0,0.25);
+                        }
+                    }
+                }
+            }
+        }

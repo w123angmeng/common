@@ -1,0 +1,131 @@
+.addChargeItem{
+    .el-dialog {
+        width:636px;
+        height:245px;
+        margin-top:0!important;
+        // margin-left: 300px !important;
+        top: 50%;
+        margin-top: -122.5px!important;
+        box-sizing: border-box;
+        .el-dialog__header{
+            height: 55px;
+            line-height: 55px;
+            padding: 0;
+            padding-left: 24px;
+            font-size: 16px;
+            border-bottom: 1px solid #f0f0f0;
+            .el-dialog__title{
+                font-size:16px;
+            }
+        }
+        .el-dialog__body {
+            padding: 15px;
+            padding-right: 0px;
+            padding-bottom: 0;
+        }
+        
+        .formDataList{
+            overflow: hidden;
+            .formLeft {
+                float:left;
+            }
+
+            .el-input__inner {
+                padding: 9px;
+            }
+        }
+        .sdPriceItem {
+            .el-select {
+                width:108px;
+            }
+        }
+        .chargeList {
+            .el-select {
+                width:180px;
+            }
+        }
+        .amount {
+            .el-input {
+                width:56px;
+            } 
+            .el-form-item {
+                display: inline-block;
+                .el-form-item__error {
+                    display: inline-block;
+                    width: 100px;
+                    color: #F56C6C;
+                    font-size: 12px;
+                    line-height: 1;
+                    padding-top: 4px;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                }
+            }
+            .sdUnit{
+                padding-left:5px;
+            }
+        }
+        .idDept{
+            .el-select {
+                width:108px;
+            } 
+        }
+
+        .chargePrice {
+            margin-left: 35px;
+        }
+    }       
+}
+
+.AddOutpTpmlList {
+    width: 560px;
+
+    .el-select-dropdown__list {
+        padding-top: 0;
+    }
+
+    .el-scrollbar {
+        width: 560px;
+    }
+
+    .el-select-dropdown__item {
+        padding: 0;
+
+        span {
+            float: left;
+            display: inline-block;
+            width: 60px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        .itmPriName {
+            width: 300px;
+            margin-left: 15px;
+        }
+
+        .itmSpec {
+            width: 200px;
+            margin-left: 30px;
+        }
+    }
+
+    .el-select-dropdown__item.hover,.el-select-dropdown__item:hover {
+        padding: 0;
+        width: 555px !important;
+    }
+
+    // .el-select-dropdown__item:first-child {
+    //     background: #F5F5F5;
+    // }
+
+    .el-select-dropdown__item.is-disabled {
+        background: #f5f5f5;
+        color: #606266;
+    }
+
+    .el-scrollbar__bar.is-horizontal {
+        display: none;
+    }
+}

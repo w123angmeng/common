@@ -1,0 +1,131 @@
+.expendTpml {
+    position: relative;
+    padding-right:  12px;
+
+}
+.expendDialog {
+    height: 422px;
+    // overflow: hidden;
+    // overflow-y: auto;
+    .el-input__inner {
+        height: 28px;
+        line-height: 28px;
+    }
+    .el-dialog__header {
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .el-dialog__body {
+        padding: 0 20px;
+        color: #606266;
+        font-size: 14px;
+        
+    }
+
+    .addExpend {
+        margin-top: 12px;
+
+        .expendForm {
+            height: 87px;
+            overflow: hidden;
+            overflow-y: auto;
+        }
+
+        /*滚动条样式*/
+        .expendForm::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .expendForm::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background: rgba(80, 79, 79, 0.2);
+        }
+
+        .addexpendtitle { 
+            font-size: 14px;
+            padding-bottom: 5px;
+            font-weight: 600;  
+        }
+
+        .el-form-item--small .el-form-item__error {
+            padding-top: 0px;
+        }
+
+        .el-form-item {
+            margin-bottom: 9px;
+        }
+        
+        .formList {
+            display: flex;
+
+            .expendName {
+                width: 215px;
+                margin-right: 23px;
+            }
+            .expendNum {
+                width: 56px;
+                margin-right: 23px;
+            }
+            
+
+            .el-icon-plus{
+                display: inline-block;
+                width: 18px;
+                height: 18px;
+                line-height: 18px;
+                font-size: 12px;
+                text-align: center;
+                border-radius: 2px;
+                background: #1890FF;
+                color: #fff;
+                cursor: pointer;
+            }
+            .el-icon-delete {
+                position: relative;
+                top: 3px;
+                font-size: 20px;
+                color: #1890FF;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .groupBtn {
+        text-align: right;
+        .el-button {
+            padding: 3px 4px;
+            width: 65px;
+            height: 24px;
+        }
+    }
+    
+    .expendtableList {
+        border: 1px solid #DBDBDB;
+        // width: 585px;
+        .el-table__body-wrapper {
+            height: 160px;
+            overflow-y: auto;
+        }
+    
+         /*滚动条样式*/
+         .el-table__body-wrapper::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .el-table__body-wrapper::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            background: rgba(80, 79, 79, 0.2);
+        }
+    }
+}
+//  /*滚动条样式*/
+// .expendDialog::-webkit-scrollbar {
+//     width: 6px;
+//     height: 6px;
+// }
+// .expendDialog::-webkit-scrollbar-thumb {
+//     border-radius: 5px;
+//     background: rgba(80, 79, 79, 0.2);
+// }

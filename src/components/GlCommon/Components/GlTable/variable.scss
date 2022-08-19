@@ -1,0 +1,485 @@
+$scrollSet: 10px; // 底部滚动条高度
+
+
+
+// ====元件样式start====
+// // 滚动条、宽滚动条
+// @mixin mixinScrollbar {
+//     & {
+//         overflow-y: auto;
+//         &::-webkit-scrollbar {
+//             /*滚动条整体样式*/
+//             // width: 17px;
+//             // height: 16px;
+//             // 被全局#contentBoxPrint的滚动条样式影响
+//             width: 17px !important;
+//             height: 16px !important;
+//         }
+//         &::-webkit-scrollbar-thumb:hover{
+//             background-color: #A3A3A3 !important;
+//         }
+//         &::-webkit-scrollbar-thumb {
+//             /*滚动条里面小方块*/
+//             border-radius: 5px;
+//             background: rgba(199, 156, 156, 0.2);
+//         }
+//     }
+// }
+
+// 滚动条、宽滚动条
+@mixin mixinScrollbar {
+    & {
+        overflow-y: auto;
+        &::-webkit-scrollbar {
+            /*滚动条整体样式*/
+            // 被全局#contentBoxPrint的滚动条样式影响
+            width: 16px !important;
+            height: 16px !important;
+        }
+        &::-webkit-scrollbar-track {
+            background-color: #EEEEEE !important;
+            width: 16px !important;
+        }
+        &::-webkit-scrollbar-thumb {
+            /*滚动条里面小方块*/
+            background: #BDBDBD !important;
+            border: 4px solid transparent !important;
+            border-radius: 10px !important;
+            background-clip: content-box !important;
+        }
+        &::-webkit-scrollbar-thumb:hover{
+            background: #A3A3A3 !important;
+            border: 4px solid transparent !important;
+            border-radius: 10px !important;
+            background-clip: content-box !important;
+        }
+    }
+}
+
+// // 细滚动条
+// @mixin mixinScrollbarSmall {
+//     & {
+//         overflow-y: auto;
+//         &::-webkit-scrollbar {
+//             width: 4px !important;
+//             height: 4px !important;
+//         }
+//         &::-webkit-scrollbar-thumb:hover{
+//             background-color: #A3A3A3 !important;
+//         }
+//         &::-webkit-scrollbar-thumb {
+//             /*滚动条里面小方块*/
+//             border-radius: 5px;
+//             background: rgba(199, 156, 156, 0.2);
+//         }
+//     }
+// }
+// 细滚动条
+@mixin mixinScrollbarSmall {
+    @include mixinScrollbar;
+    & {
+        &::-webkit-scrollbar {
+            /*滚动条整体样式*/
+            // 被全局#contentBoxPrint的滚动条样式影响
+            width: 4px !important;
+            height: 4px !important;
+        }
+        &::-webkit-scrollbar-track {
+            width: 4px !important;
+        }
+        &::-webkit-scrollbar-thumb,
+        &::-webkit-scrollbar-thumb:hover {
+            /*滚动条里面小方块*/
+            border: none !important;
+        }
+    }
+}
+
+// 表格滚动条
+@mixin mixinTableScrollbar {
+    /deep/ .el-table__body-wrapper {
+        @include mixinScrollbar;
+    }
+    .el-table__body-wrapper {
+        @include mixinScrollbar;
+    }
+    // /deep/ {
+    //     .el-table__body-wrapper {
+    //         overflow-y: auto;
+    //     }
+    //     .el-table__body-wrapper::-webkit-scrollbar {
+    //         /*滚动条整体样式*/
+    //         // width: 17px;
+    //         // height: 16px;
+    //         // 被全局#contentBoxPrint的滚动条样式影响
+    //         width: 17px !important;
+    //         height: 16px !important;
+    //     }
+    //     .el-table__body-wrapper::-webkit-scrollbar-thumb:hover{
+    //         background-color: #A3A3A3 !important;
+    //     }
+    //     .el-table__body-wrapper::-webkit-scrollbar-thumb {
+    //         /*滚动条里面小方块*/
+    //         border-radius: 5px;
+    //         background: rgba(199, 156, 156, 0.2);
+    //     }
+
+    //     // 暂时注释细滚动条的样式
+    //     // /deep/ .el-table__body-wrapper::-webkit-scrollbar {
+    //     //     width: 6px !important;
+    //     //     height: 6px !important; // 纵向滚动条 必写
+    //     // }
+    // }
+}
+
+// 分页器
+@mixin mixinPaging {
+    box-sizing: border-box;
+    height: 56px;
+    padding: 14px 16px;
+    text-align: right;
+    &:empty {
+        height: 20px;
+        padding: 0;
+    }
+    .el-pagination {
+        margin: 0;
+    }
+}
+
+// 暂无数据
+@mixin mixinEmptyDataInner {
+    // 表格无数据时、树无数据时，展示暂无数据图标
+    & {
+        width: 92px;
+        height: 68px;
+        background: url('~@/assets/images/doctws/list_empty.svg') no-repeat center center;
+        font-size: 14px;
+        font-weight: normal !important;
+        color: #B6C9DB;
+        line-height: 152px;
+    }
+}
+
+@mixin mixinEmptyData {
+    // 表格无数据时、树无数据时，展示暂无数据图标
+    /deep/ .el-table__empty-text,
+    /deep/ .el-tree__empty-text {
+        @include mixinEmptyDataInner;
+    }
+
+    .el-table__empty-text,
+    .el-tree__empty-text {
+        @include mixinEmptyDataInner;
+    }
+}
+
+// 表格
+@mixin mixinTable {
+    @include mixinTableScrollbar;
+    @include mixinEmptyData;
+    th {
+        background-color: #F0F2F5;
+        color: $dark-melanin;
+        font-weight: bold;
+        padding: 4px 0;
+        font-size: 14px;
+        border-bottom: #E8E8E8;
+        border-right: #E8E8E8;
+        // 表格标题，必填的红色*
+        &.th--required {
+            .cell::before {
+                content: '* ';
+                color: red;
+            }
+        }
+        //表格的线
+
+    }
+    td {
+        padding: 1px 0px;
+        font-size: 14px;
+        .cell {
+            line-height: 28px;
+        }
+
+        &.hide-cell {
+            .cell {
+                display: none;
+            }
+        }
+    }
+    .el-button {
+        font-size: 14px;
+        padding: 0;
+    }
+
+    // 隐藏行
+    tr.hide {
+        display: none;
+    }
+
+    // 选中的行样式
+    tr.active > td {
+        background-color: #E8F4FF !important;
+    }
+
+    // 行上的文字是灰色的
+    tr.c-gray > td {
+        color: #BDBDBD;
+    }
+}
+
+// 表格
+@mixin mixinEditTable {
+    @include mixinTable;
+
+    td {
+        .chgs__row-add-flag {
+            color: #BFBFBF;
+            font-size: 16px;
+        }
+    }
+    .el-input--small .el-input__inner {
+        height: 28px;
+        line-height: 28px;
+    }
+    .el-input-number--small {
+        width: 100%;
+        .el-input__inner {
+            text-align: right;
+        }
+    }
+    .el-select,
+    .el-date-editor {
+        width: 100%;
+    }
+    .row__btn--more {
+        color: #1890FF;
+        margin-left: 8px;
+    }
+}
+
+// 表单
+@mixin mixinForm {
+    // 按钮大小为14px
+    .el-button--small {
+        font-size: 14px;
+    }
+    // 表单
+    .el-form-item--small.el-form-item {
+        margin-bottom: 12px;
+    }
+
+    .el-form-item__label {
+        // padding-right: 4px; //默认是12px;
+        //【全局】条件录入筛选区
+        // 1.标题与组件的间距为：0
+        // 2.各个组件间间距：40
+        padding-right: 0px; //默认是12px; 更改全局统一样式，
+
+    }
+    .el-form--inline .el-form-item{
+        margin-right:40px;
+    }
+
+    // 栅格下的表单元素，100%
+    .el-col {
+        .el-select,
+        .el-input,
+        .el-input-number {
+            width: 100%;
+        }
+    }
+
+    // 表单输入框的padding统一
+    .el-input:not(.el-date-editor):not(.el-input--prefix) >.el-input__inner {
+        padding: 0 8px;
+    }
+    // 金额类，数量类，右对齐
+    .f-tar .el-input__inner {
+        text-align: right;
+    }
+    .el-input-number .el-input__inner {
+        text-align: right;
+    }
+    // 金额输入框，带人民币符号
+    .input-number--icon-rmb {
+        .el-input {
+            &::before {
+                content: '¥';
+                position: absolute;
+                top: 2px;
+                left: 8px;
+                color: #424242;
+            }
+        }
+    }
+    .c-money-red .el-input__inner {
+        color: $money-red !important;
+    }
+    .c-money-orange .el-input__inner {
+        color: $money-orange !important;
+    }
+
+    // 表单-宽度
+    .w160 {
+        width: 160px;
+    }
+
+}
+
+// 文字类
+@mixin mixinText {
+    .money__wrap {
+        margin-right: 24px;
+        font-size: 14px;
+        line-height: 22px;
+        &:nth-last-of-type(1) {
+            margin-right: 0;
+        }
+    }
+    .money__label {
+        font-size: 14px;
+        line-height: 22px;
+        color: #000000;
+    }
+    .money__number {
+
+    }
+}
+
+// ====元件样式end======
+
+
+// ====复合样式start====
+@mixin mixinPage {
+    font-size: 14px;
+    color: $darker-gray;
+    /deep/ {
+        @include mixinForm;
+    }
+
+    @include mixinEmptyData;
+    @include mixinText;
+
+
+    // 页面标题
+    .p__title {
+        box-sizing: border-box;
+        height: 57px;
+        line-height: 56px;
+        padding: 0 16px;
+        color: $darker-melanin;
+        font-size: 20px;
+        font-weight: 600;
+        border-bottom: 1px solid #e9e9e9;
+    }
+
+    // 页面-查询条件区====start====
+    .p__search {
+        box-sizing: border-box;
+        // 查询条件，默认56px高度，若超出，在具体页面设置heigt: auto; 进行覆盖
+        height: 56px;
+        line-height: 32px;
+        padding: 12px 16px;
+    }
+    .p__search-form {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .el-form-item.p__search-item--right {
+        margin-left: auto;
+        margin-right: 0;
+    }
+    // 页面-查询条件区====end======
+
+
+    // 页面-主表格区
+    .p__table {
+        position: relative;
+        // margin: 0px 6px 0 16px;
+        margin: 0px 16px 0 16px;
+    }
+    // 不需要分页的p__table，携带向下距离
+    .pb20 {
+        padding-bottom: 20px;
+    }
+
+    // 页面分页
+    .p__paging {
+        @include mixinPaging;
+    }
+
+}
+
+@mixin mixinDialogForm {
+    @include mixinForm;
+
+    // 弹框上的表单元素，占满父元素的100%
+    // .el-form-item__content {
+    //     .el-select,
+    //     .el-input,
+    //     .el-input-number {
+    //         width: 100%;
+    //     }
+    // }
+
+    // 弹框上的小标题
+    .title_p{
+        padding: 10px;
+        font-weight: 700;
+        text-align: left;
+    }
+
+    // 弹框上非slot-footer的按钮组样式
+    .dialogForm__btnGroup{
+        margin-bottom: 24px;
+        text-align: right;
+    }
+}
+
+@mixin mixinDialog {
+    @include mixinDialogForm;
+
+    .el-dialog__header {
+        border-bottom: 1px solid #E8E8E8;
+    }
+    .el-dialog__body {
+        padding-top: 16px;
+    }
+    // .el-form-item--small.el-form-item {
+    //     margin-bottom: 12px;
+    // }
+}
+
+// 弹框存在-多Tab的标题
+@mixin mixinMultiTabDialog {
+    .el-dialog__header{
+        padding: 0;
+        .el-dialog__headerbtn {
+            z-index: 1;
+        }
+    }
+    .el-dialog__body{
+        padding: 0;
+    }
+    .el-tabs__nav-scroll{
+        padding:0 15px;
+        line-height: 56px;
+        height: 56px;
+        font-size: 16px;
+    }
+    .el-tabs el-tabs--top{
+        padding-top: 15px;
+    }
+    .el-tabs__item{
+        font-size: 16px;
+    }
+    .el-tabs__content{
+        padding: 0 15px;
+    }
+}
+
+
+// ====复合样式end======

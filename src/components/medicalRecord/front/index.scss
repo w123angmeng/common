@@ -1,0 +1,275 @@
+.medicalRecordFront {
+    background-color: #fff;
+    padding: 20px;
+    // position: relative;
+    .printBtn {
+        margin-bottom: 20px;
+        // position: absolute;
+        // z-index: 100;
+        // margin-left: 20px;
+        // margin-top: 20px;
+    }
+    .firstTitle {
+        text-align: center;
+        position: relative;
+        .organizationalCode {
+            position: absolute;
+            right: 30px;
+            top: 4px;
+        }
+    }
+    .medicalRecordOuter {
+        border: 1px solid #000;
+        padding: 20px;
+    }
+    .baseInfo {
+        .el-select .el-input__inner {
+        padding: 0;
+    }
+    .el-input__inner {
+        padding: 0;
+    }
+    .el-input__prefix  {
+        display: none;
+    }
+         .el-input__inner {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        outline: none;
+    } 
+    .el-select .el-input__inner {
+        border-top: 1px solid #dcdfe6;
+        border-left: 1px solid#dcdfe6;
+        border-right: 1px solid#dcdfe6;
+        border-radius: 0;
+        outline: none;
+        padding: 5px;
+    }
+    .el-select .el-input__suffix {
+        display: none;
+    }
+        margin-top: 10px;
+        .baseInfoUp {
+            margin-bottom: 10px;
+            display:box;
+            display:-webkit-box;
+            display:-webkit-flex; 
+            display:-moz-box; 
+            display:-ms-flexbox; 
+            display:flex;
+            justify-content: space-between;
+            div {
+                .selcetWidth {
+                    width: 50px; 
+                }
+                .minnWidth {
+                    width: 25px;
+                }
+                .inHospitalWidth {
+                    width: 30px; 
+                }
+                .recordNumWidth {
+                    width: 80px;
+                }
+                .cardNumWidth {
+                    width: 80px;
+                }
+                .IDWidth {
+                    width: 80px;
+                }
+            }
+        }
+    }
+    .contentInfo {
+        .el-select .el-input__inner {
+        padding: 0;
+    }
+    .el-input__inner {
+        padding: 0;
+    }
+    .el-input__prefix  {
+        display: none;
+    }
+         .el-input__inner {
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        outline: none;
+    } 
+    .el-select .el-input__inner {
+        border-top: 1px solid #dcdfe6;
+        border-left: 1px solid#dcdfe6;
+        border-right: 1px solid#dcdfe6;
+        border-radius: 0;
+        outline: none;
+        padding: 5px;
+    }
+    .el-select .el-input__suffix {
+        display: none;
+    }
+        padding-top: 10px;
+        border: 1px solid #000;
+        .contentInfoTop {
+            padding: 0 10px;
+            margin-bottom: 10px;
+            display:box;
+            display:-webkit-box;
+            display:-webkit-flex; 
+            display:-moz-box; 
+            display:-ms-flexbox; 
+            display: flex;
+            justify-content: space-between;
+            .nameWidth {
+                width: 60px;
+            }
+            .genderWidth {
+                width: 40px;
+            }
+            .minnWidth {
+                width: 25px;
+            }
+            .ageWidth {
+                width: 35px;
+            }
+            .birthDateWidth {
+                width: 100px;
+                padding-right: 22px;
+            }
+            .newChildWidth {
+                width: 40px;
+            }
+            .birthPlaceWidth {
+                width: 130px;
+            }
+            .householdPlaceWidth {
+                width: 300px;
+            }
+            .inHospitalDateWidth {
+                width: 135px;
+            }
+        }
+
+        .contentInfoTable {
+            .el-input__inner {
+                border: none;
+                outline: none;
+                margin-left: 5px;
+            }
+            display:box;
+            display:-webkit-box;
+            display:-webkit-flex; 
+            display:-moz-box; 
+            display:-ms-flexbox; 
+            display: flex;
+            border-top: 1px solid #000;
+            .diagnosisRow {
+                display:box;
+                display:-webkit-box;
+                display:-webkit-flex; 
+                display:-moz-box; 
+                display:-ms-flexbox; 
+                display: flex;
+                flex: 0.5;
+                .contentInfoTableMax {
+                    border-right: 1px solid #000;
+                    flex: 3;
+                }
+            }
+            .contentInfoTableTitle {
+                text-align: center;
+            }
+            .contentInfoTableMax {
+                border-right: 1px solid #000;
+                flex: 3;
+            }
+            .contentInfoTableMid {
+                border-right: 1px solid #000;
+                flex: 1;
+                p {
+                    border-bottom: 1px solid #000;
+                }
+                p:last-child {
+                    border-bottom: none;
+                }
+            }
+            .contentInfoTableMin {
+                border-right: 1px solid #000;
+                flex: 0.5;
+            }
+            .noBorder {
+                border-color: transparent;
+            }
+            .transparentBorder {
+                border-right: 1px solid transparent;
+            }
+            .maxWidth {
+                // width: 250px;
+                width: 150px;
+            }
+            .midWidth {
+                width: 70px;
+            }
+            .minWidth {
+                width: 30px;
+            }
+            .contentInfoTableHeight {
+                height: 40px;
+                line-height: 40px;
+            }
+        }
+        
+        .contentInfoTableAcores {
+            display:box;
+            display:-webkit-box;
+            display:-webkit-flex; 
+            display:-moz-box; 
+            display:-ms-flexbox; 
+            display: flex;
+            border-top: 1px solid #000;
+            justify-content: space-between;
+            .contentInfoTableHeight {
+                height: 40px;
+                line-height: 40px;
+            }
+            
+            .maxWidth {
+                width: 150px;
+            }
+            .midWidth {
+                width: 100px;
+            }
+            .minWidth {
+                width: 50px;
+            }
+            .minnWidth {
+                width: 25px;
+            }
+        }
+        .borderTopNone {
+            border-top: none;
+        }
+    }
+    .dialog {
+        .el-dialog__body {
+            padding-bottom: 100px;
+        }
+        .dialogBtn {
+            position: absolute;
+            right: 30px;
+            bottom: 0;
+        }
+    }
+    .noThreeBorder {
+        .el-select .el-input__inner {
+        border-left: none;
+        border-top: none;
+        border-right: none;
+        border-radius: 0;
+        outline: none;
+        padding: 5px;
+    }
+    }
+}

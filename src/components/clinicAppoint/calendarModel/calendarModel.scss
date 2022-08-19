@@ -1,0 +1,153 @@
+.CalendarModel {
+    position: relative;
+    padding-bottom: 12px;
+
+    .CalendarModel_wraps {
+        display: flex !important;
+    }
+    .cutLine {
+        width: 570px;
+        margin-top: 12px;
+        border-bottom: 1px solid #D9DCDF;
+    }
+
+    .calendar_fr {
+        position: absolute;
+        right: 0px;
+        .colornum {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            margin-top: 25px;
+        }
+        .no_num {
+            background: #dad5d5;
+        }
+        .have_num {
+            background: #73b5f8;
+        }
+        .full_num {
+            background: #FF9898;
+        }
+    }
+
+    .wh_content_all {
+        width: 530px !important;
+        background-color: #F8F9FA !important;
+        padding-bottom: -0px !important;
+        border-radius: 2px;
+    }
+
+    .wh_top_changge {
+        .wh_content_li {
+            font-size: 16px;
+            color: #000;
+        }
+        .wh_jiantou1 {
+            width: 8px;
+            height:8px;
+            border-top: 2px solid #000;
+            border-left: 2px solid #000;
+        }
+    
+        .wh_jiantou2 {
+            width: 8px;
+            height: 8px;
+            border-top: 2px solid #000;
+            border-right: 2px solid #000;
+        }
+    }
+
+    .wh_content {
+        color: #000 !important; 
+        position: relative;
+        top: -20px;
+        padding-top: 10px;
+        .wh_top_tag {
+            color: #000; 
+
+            .wh_content_item {
+                height: 34px;
+            }
+        }
+    }
+
+    .wh_content:nth-child(3) {
+        .wh_content_item {
+            height: 24px;
+            width: 24px;
+            margin: 8px 23.5px;
+        }
+    }
+
+    .wh_content_item .wh_isToday {
+        background: #F8F9FA !important;  
+    }
+
+    //正常日期
+    .wh_content_item .wh_item_date {
+        height: 24px;
+        width: 24px;
+        font-size: 12px;
+        background: #73b5f8 !important;
+        color: #fff !important;
+        border-radius: 50%;
+
+        &:hover {
+            background: #73b5f8 !important;
+            opacity: 0.7 !important; 
+        }
+    }
+
+    //禁用日期   
+    .wh_content_item .wh_want_dayhide{
+        color: #bfbfbf !important;
+        background: #F8F9FA !important; 
+        &:hover {
+            background: #F8F9FA !important;
+            opacity: 1 !important; 
+        }
+    }
+
+    // 没排班
+    .wh_content_item .wh_item_date.mark_noSch{
+        color: rgb(128, 123, 123) !important;
+        background: #dad5d5 !important;
+        border-radius: 50%;
+        &:hover {
+            background: #dad5d5 !important;
+            opacity: 0.7 !important; 
+        }
+    }
+    //约满
+    .wh_content_item .wh_item_date.mark_fullUse {
+        background: #FF9898 !important;
+        color: #fff !important;
+        border-radius: 50%;
+        &:hover {
+            background: #FF9898 !important;
+            opacity: 0.7 !important; 
+        }
+    }
+
+    //选中日期
+    .wh_content_item .wh_item_date.mark_curDay {
+        background: #1890FF !important;
+        color: #fff !important;
+        border-radius: 50%;
+
+        &:hover {
+            background: #1890FF !important;
+            opacity: 0.9 !important; 
+        }
+    }
+
+    .wh_content_item  .wh_item_date.mark_festDay::after{
+        content: "休";
+        color: #a79f68;
+        position: absolute;
+        left: 27px;
+        top: -7px;
+    }    
+}

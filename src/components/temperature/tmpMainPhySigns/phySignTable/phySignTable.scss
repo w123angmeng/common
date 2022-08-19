@@ -1,0 +1,111 @@
+.phySignTable{
+    .phySignTable_wrap {
+        // padding: 0 30px 30px 30px;
+    
+        .phyHandleBox {
+            margin-bottom: 20px;
+            position: relative;
+    
+            .search-row {
+                padding-bottom: 19px;
+                display: flex;
+                flex-wrap: wrap;
+                .search-input-item {
+                    display: flex;
+                    align-items: center;;
+                    margin-right: 20px;
+                    margin-bottom: 10px;
+                    .fz14{
+                        font-size: 14px;
+                    }
+                    .fontLine{
+                        text-decoration:underline;
+                    }
+                    .labelTitle {
+                        font-size: 14px;
+                        display: inline-block;
+                        margin-right: 20px;
+                        color: #606266;
+                        width: 60px;
+                        text-align-last: justify;
+                    }
+                    .phyInputCss{
+                        width: 200px;
+                        .el-input,
+                        .el-select {
+                            max-width: 200px !important;
+                        }
+                        .el-select__tags{
+                            max-width: 200px !important;
+                        }
+                    }
+                   
+    
+                    .el-date-editor {
+                        max-width: 300px;
+                    }
+                }
+    
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+            .search-mainBtn{
+                display: flex;
+                position: absolute;
+                right: 0;
+                top: 0;
+                .searchBtn{
+                    margin-left: 20px;
+                }
+            }
+            
+        }
+        .phySignTable {
+            .btnRightLine {
+                color: #E9E9E9;
+            }
+            .operBtnCss{
+                font-size: 14px;
+            }
+            .newRow {
+                .el-input--small .el-input__inner{
+                    text-align: center;
+                    border: 1px solid #1890FF;
+                    &:focus{
+                        &+.el-input__suffix{
+                            display: block;
+                        }
+                        &+.el-select__caret{
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .el-input--small .el-input__inner{
+                border: none;
+                text-align: center;
+                &+.el-input__suffix{
+                    display: none;
+                }
+                &:focus{
+                    border: 1px solid #1890FF;
+                }
+            }
+            .el-input.is-focus .el-input__inner{
+                border: 1px solid #1890FF;
+                &+.el-input__suffix{
+                    display: block;
+                }
+            }
+            .el-form-item.is-error .el-input__inner, .el-form-item.is-error .el-input__inner:focus{
+                border-color: #F56C6C;
+            }
+            
+        }
+        .phySignPagination{
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

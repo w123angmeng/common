@@ -1,0 +1,38 @@
+
+.inspectCon{
+    width: 298px;
+    height: 100%;
+    padding: 16px;
+    box-sizing: border-box;
+    border-right: 2px solid #E5E5E5;
+    .title{
+        font-weight: 500;
+        margin-bottom: 16px;
+    }
+    .changeBox{
+        margin-bottom: 8px;
+        .el-select{
+            width: 100%;
+        }
+    }
+    .inspectTree {
+        height: calc(100% - 40px) !important;
+    }
+    .inspectTreeDatas {
+        height: 100%;
+        overflow-y: auto;
+    }
+    .span-ellipsis {
+        width: 100%;
+        /* 溢出隐藏 */
+        overflow: hidden;
+        /* 显示省略号 */
+        text-overflow: ellipsis;
+        /* 不换行 */
+        white-space: nowrap;
+    }
+    // 检查申请目前
+    /deep/ .modifiedLevel3 .el-tree-node>.el-tree-node__children>.el-tree-node>.el-tree-node__children>.el-tree-node>.el-tree-node__content {
+        padding-left: 18px !important;
+    }
+}

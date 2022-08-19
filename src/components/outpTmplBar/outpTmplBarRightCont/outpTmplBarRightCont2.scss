@@ -1,0 +1,220 @@
+.outpTmplBarRightCont.template{
+    height: 100%;
+    padding-left: 0;
+    .templateTimePiker{
+        position: absolute;
+        top: 8px;
+        width: 200px;
+        right: 336px;
+        justify-content: baseline;
+        align-items: center;
+        .templateAsyn{
+            margin-left: 10px;
+        }
+    }
+    .docRelateDiagnose{
+        height: auto;
+        padding: 15px;
+        color:#262626;
+    }
+    .docModuleRelateDiagnose .docRelateDiagnoseTxt{
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 1;
+        .relateDiagnoseStr{
+            font-size: 16px;
+            color:#262626;
+        }
+    }
+    
+    .el-input-number.is-controls-right .el-input__inner{
+        padding: 0;
+    }
+    .templateTable{
+        flex: 1;
+        overflow: hidden;
+    }
+    .templateHandler{
+        padding: 16px;
+        text-align: right;
+    }
+    .doseSpan{
+        display: inline-block;
+        width: 24px;
+    }
+    .el-input {
+        height: 24px;
+        line-height: 1;
+        .el-input__inner {
+            height: 24px;
+            line-height: 24px;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .el-input__icon{
+            line-height: 24px;
+        }
+    }
+    .el-input-number{
+        flex: 1;
+        .el-input__inner {
+            padding: 0;
+        }
+    }
+    .el-table {
+        height: 100%;
+        .cell {
+            padding:0 3px;
+            text-align: center;
+        }
+        .clinicItemName{
+            text-align: left;
+        }
+        .ordersNameDetails{
+            display: flex;
+            width: 100%;
+            
+            flex-direction: row;
+            
+        }
+        .BChildrenBg {
+            td {
+                border-bottom: 1px solid #EBEEF5; 
+            }
+        }
+        .el-date-editor{
+            width: 100%;
+        }
+        .amountChange {
+            width:74px;
+            &.el-input-number--mini {
+                line-height: 22px;
+            }
+            .el-input__inner {
+                padding: 0 24px;
+                height: 24px;
+                line-height: 24px;
+            }
+            .el-input-number__decrease, .el-input-number__increase {
+                width: 22px;
+                height: 22px;
+                display: inline-block;
+            }
+        }
+        .beginDate{
+            width: 60%;
+        }
+        .beginTime{
+            width: 40%;
+        }
+        .beginDate, .beginTime {
+            .el-input__prefix {
+                display: none;
+            }
+           .el-input__inner {
+               padding: 3px 4px;
+           }
+        }
+    }
+    .el-table__row--level-1 {
+        background:#FAFAFA;
+        td{
+            border-bottom:0;
+            border-top:0;
+            .el-table__indent {
+                // padding-left:15px!important;
+                padding-left: 0!important;
+                padding-right:0!important;
+            }
+        }
+      }
+      .confrimQuote{
+        position: absolute!important;
+        bottom: 40px;
+        right: 10px;
+      }
+      .el-table__expand-icon{
+          display: none!important;
+      }
+      .el-table__placeholder{
+          width:auto;
+      }
+      .el-table__body-wrapper{
+          height:calc(100% - 125px);
+          overflow-y: auto;
+      }
+      /*滚动条样式*/
+    .el-table__body-wrapper::-webkit-scrollbar {
+        /*滚动条整体样式*/
+        width: 6px;
+        height: 6px;
+    }
+    .el-table::before{
+        height:0;
+    }
+    .el-table__body-wrapper::-webkit-scrollbar-thumb {
+        /*滚动条里面小方块*/
+        border-radius: 5px;
+        background: rgba(80, 79, 79, 0.2);
+    }
+
+    .orderItem {
+        display: flex;
+        flex-direction: row;
+        overflow:hidden;
+        text-overflow:ellipsis;
+        width:11%;
+        color: #595959;
+        &:first-child{
+            width: auto;
+            // font-weight: 700;
+            font-weight: 600;
+            color: #000;
+            .text-tooltip{
+                max-width: 200px;
+            }
+        }
+        &:nth-child(2){
+            padding-left: 4px;
+            flex: 1;
+            color: #8C8C8C !important;
+            .text-tooltip{
+                min-width: 30px;
+            }
+        }
+        &:not(:nth-child(1)):not(:nth-child(2)){
+            .text-tooltip{
+                width: 100%;
+            }
+        }
+        .letter_space{
+            margin-left: 4px;
+        }
+        .special,.blueTxt,.greenTxt {
+            font-size:14px;
+            color:#FA211F;
+            font-weight: bold;
+        }
+        .greenTxt{
+            color: #72C140;
+        }
+        .blueTxt{
+            color: #448EF7;
+        }
+       
+    }
+}
+.myCell .el-checkbox__input {
+    display: none;
+  }
+.colorRed .cell{
+    color: #FF4949;
+}
+.el-tooltip__popper.is-dark{
+    max-width: 100%;
+}
+.valiDateList{
+    .el-dialog__body{
+        padding-top: 0;
+    }
+}

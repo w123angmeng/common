@@ -1,0 +1,480 @@
+// #BFBFBF: #BFBFBF;
+// #888: #888;
+// 12px: 12px;
+//定义字体
+$borderWidth: 2px;
+$borderDarkColor:#1a1919;
+$borderLightColor:#3c3c3c;
+
+html,
+body,
+#main {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    // overflow: hidden;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-align: center
+}
+
+.show-detail {
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 8px;
+    }
+
+    &::-webkit-scrollbar-corner,
+    &::-webkit-scrollbar-track {
+        background-color: #B7B7B7;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border-radius: 0;
+        background-color: rgba(0, 0, 0, .3);
+    }
+
+}
+
+.footBtn {
+    line-height: 28px;
+    text-align: left;
+    margin: 15px 0;
+
+    .ant-calendar-picker {
+        margin-right: 10px;
+    }
+}
+
+.temperature-chart {
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 765px;
+    height: 1122px;
+    padding: 44px 19px 40px 19px;
+    font-family:'SimSun';
+    font-weight: normal;
+    box-sizing: border-box;
+    .ant-spin-nested-loading {
+        width: 100%;
+        height: 100%;
+
+        .ant-spin-container {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .tempChartLogo{
+        position:absolute;
+        top:200px;
+        left:-14px;
+        .tempChartBox{
+            display: flex;
+            flex-direction: column;
+        }
+        
+    }
+    .tempCartSvg {
+        position: relative;
+    }
+
+    .showInfo {
+        width: 100%;
+        table-layout: fixed;
+        tr td.borderVL{
+            border-right-color: $borderDarkColor;
+            border-right-width: $borderWidth;
+        }
+        tr td:first-child{
+            border-left-color: $borderDarkColor;
+        }
+        td {
+            height: 20px;
+            border: 1px solid $borderLightColor;
+        }
+
+        tr td {
+            text-align: center;
+            font-size: 12px;
+            &:first-child{
+                border-right-color:$borderDarkColor;
+                border-right-width: $borderWidth;
+            }
+            &:last-child{
+                border-right-width: 1px;
+            }
+        }
+
+        tr td:nth-of-type(1) {
+            // border-left: none;
+            text-align: justify;
+            text-align-last: justify;
+            padding: 0 1px;
+            
+        }
+        tr:first-child td{
+            border-top-color: $borderDarkColor;
+        }
+        tr:last-of-type td {
+            border-bottom: none;
+        }
+        tr td:last-of-type{
+            border-right-color:$borderDarkColor;
+        }
+    }
+
+    .flow_div {
+        position: relative;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 51px);
+        max-height: calc(100% - 51px);
+        overflow-y: auto;
+        overflow-x: hidden;
+        box-sizing: border-box;
+    }
+
+    .flow_div::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    table.tableSvg {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        border-bottom: none;
+        td {
+            border: 1px solid $borderLightColor;
+        }
+
+        tr td {
+            font-size: 12px;
+            
+        }
+        tr{
+            &:last-child td{
+                border-bottom-color: $borderDarkColor;
+            }
+            td:first-child{
+                border-left-color: $borderDarkColor;
+                
+            }
+            &:first-child{
+                td:first-child{
+                    border-right-color: $borderDarkColor;
+                    border-right-width: $borderWidth;
+                }
+            }
+        }
+        tr td{
+            position: relative;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        tr td.redLight .fontSizeChange{
+            font-size: 12px;
+            width: 118%;
+            transform-origin: 0 0;
+            transform: scale(0.8);
+            white-space: normal;
+            vertical-align: middle;
+            line-height: 14px;
+            display: inline-block;
+            text-align: left;
+        }
+        td {
+            text-align: center;
+        }
+
+        tr td.borderR,
+        tr.height td.borderR {
+            border-right-color: red;
+            border-right-width: $borderWidth;
+        }
+        tr td.borderVL{
+            border-right: 1px solid $borderDarkColor;
+            border-right-width: $borderWidth;
+        }
+        tr.height.borderT td,
+        tr.borderT td {
+            border-top: 1px solid red;
+            border-top-width: $borderWidth;
+        }
+
+        tr.height.borderB td,
+        tr.borderB td,
+        tr.height td.borderB {
+            border-bottom: 1px solid $borderDarkColor;
+            border-bottom-width: $borderWidth;
+        }
+
+        tr td:last-of-type {
+            border-right: 1px solid $borderDarkColor;
+        }
+        .painTrCss{
+            span{
+                display: block;
+            }
+        }
+        tr td.hideBorder{
+            border: none;
+            border: 1px solid #ffffff;
+        }
+    }
+
+    .svgCenter {
+        position: absolute;
+        width: 100%;
+        /*height:100%;*/
+        z-index: 98;
+        //display:none;
+    }
+    .svgPainBox{
+        position: absolute;
+        width: 100%;
+        /*height:100%;*/
+        z-index: 98;
+        //display:none;
+    }
+
+    // .fontSet {
+    //   -webkit-transform: scaleX(0.99);
+    // }
+
+    #titleTr tr:nth-of-type(2) td {
+        padding-bottom: 3px;
+    }
+
+    .svgLeft,
+    .svgRight,
+    #svgLeft,
+    #svgRight {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    // #svgTitle {
+    //   background: #FFF;
+    //   border: 1px solid #BFBFBF;
+    //   padding: 1px 6px;
+    //   color: #1a1919;
+    //   font-weight: 500;
+    //   font-size: 12px;
+    //   border-radius: 3px;
+    //   -webkit-border-radius: 3px;
+    //   position: absolute;
+    //   z-index: 1000;
+    //   display: none;
+    // }
+    [line] {
+        cursor: pointer;
+    }
+
+    /* 打印样式调整 */
+    .container.print table tr.height {
+        height: 15px;
+    }
+
+    .container.print .footBtn {
+        display: none;
+    }
+
+    .container.print .scale {
+        transform: scale(1);
+    }
+
+    .container.print .patInfo td {
+        height: 17px;
+        line-height: 17px;
+        font-size: 12px;
+    }
+
+    .container.print .showInfo td {
+        height: 15px;
+        line-height: 15px;
+        font-size: 12px;
+    }
+
+    .container.alone.print tr.every td {
+        line-height: 15px;
+        font-size: 12px
+    }
+
+    .container.alone.print .tableSvg tr.addClone {
+        height: 15px;
+    }
+
+    .container.print .flow_div {
+        max-height: inherit;
+    }
+
+    text {
+        font-size: 12px;
+    }
+
+    .container.print text {
+        font-size: 12px;
+    }
+
+    //svg样式
+    circle,
+    rect,
+    line,
+    path {
+        cursor: pointer;
+    }
+
+    .pageFooter {
+        position: absolute;
+        left: 0;
+        bottom: 40px;
+        width: 100%;
+        font-size: 14px;
+        text-align: center;
+
+        .printSow {
+            display: none;
+        }
+    }
+}
+
+.ant-tooltip-inner {
+    background: #FFF;
+    font-size: 11px;
+    font-family: "microsoft yahei", "Helvetica Neue For Number", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 15px !important;
+    min-height: 15px !important;
+    padding: 5px 10px !important;
+}
+
+.kdTitle {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    top: 0;
+    left: 0;
+    display: flex;
+
+    p {
+        text-align: center;
+        flex: 1;
+    }
+}
+
+// patientInfo.vue 页面样式开始
+.hospitalName {
+    text-align: center;
+    font-size: 26px;
+    line-height: 24px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    letter-spacing: 16px;
+    margin-top: 10px;
+}
+
+.tempTitle {
+    text-align: center;
+    font-size: 16px;
+}
+
+.patinfoDiv {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    line-height: 18px;
+    margin-bottom: 6px;
+    box-sizing: border-box;
+    .p{
+        white-space: nowrap;
+        display: inline-block;
+        margin: 0;
+        span {
+            &:nth-child(1) {
+                font-size: 12px;
+            }
+            &:nth-child(2){
+                font-size: 14px;
+                text-decoration: underline;
+            }
+        }
+        &:last-child{
+            padding: 0;
+            margin: 0px;
+        }
+    }
+}
+
+// patientInfo.vue 页面样式结束
+
+// svgCenter.vue 页面样式开始
+#msvg, #svgPain {
+    float: right;
+}
+
+.tooltipClass {
+    color: #000000;
+    background: #ffffff;
+    z-index: 999;
+    border-radius: 5px;
+    padding: 2px 8px;
+    font-size: 14px;
+    background: #F9F9F9;
+    box-shadow: 0px 4px 5px -3px rgba(0, 0, 0, 0.25);
+}
+
+// svgCenter.vue 页面样式结束
+
+.redLight{
+    color: red;
+}
+@media print {
+    .temperature-chart {
+        position: relative;
+        font-family:'SimSun';
+        font-weight: normal;
+        padding: 44px 19px 40px 19px;
+        margin:0 auto auto 24px;
+        zoom: 1;
+        transform: scale(0.94, 1);
+        transform-origin: 0 1;
+        -moz-transform: scale(0.94, 1);
+        -moz-transform-origin: 0 1;
+        box-sizing: border-box;
+    }
+    .hospitalName{
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    .printHide {
+        display: none;
+    }
+
+    .printSow {
+        display: block !important;
+    }
+}
+
+@page {
+    margin: 0;
+    padding: 0;
+    size: A4 portrait;
+}

@@ -1,0 +1,20 @@
+.historyVisitDia_Js {
+    .historyVisitJsDialog {
+        .el-dialog {
+            height: 700px;
+        }
+        .el-dialog__header {
+            border-bottom: 1px solid #E9E9E9;
+        }
+
+        .el-dialog__body {
+            height: 84%;
+            padding: 0px;
+        }
+
+        .hisJsBtns {
+            text-align: right;
+            padding-right: 20px;
+        }
+    }
+}

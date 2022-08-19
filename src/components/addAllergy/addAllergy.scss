@@ -1,0 +1,90 @@
+.AddAllergy {
+    margin-top: -10px;
+    width: 100%;
+    // .allergy-input {
+    //     .el-input {
+    //         width: 202px;
+    //     }
+
+    //     .el-input--small .el-input__inner {
+    //         width: 202px;
+    //         /* 溢出隐藏 */
+    //         overflow: hidden;
+    //         /* 显示省略号 */
+    //         text-overflow: ellipsis;
+    //         /* 不换行 */
+    //         white-space: nowrap;
+    //     }
+    // }
+
+   
+
+
+    // .el-input {
+    //     width: 128px;
+    //     font-size: 12px;
+    // }
+    
+
+    // .reaction {
+        // .el-input__inner {
+        //     width: 128px;
+        //     /* 溢出隐藏 */
+        //     overflow: hidden;
+        //     /* 显示省略号 */
+        //     text-overflow: ellipsis;
+        //     /* 不换行 */
+        //     white-space: nowrap;
+        // }
+    // }
+
+    // .rowTime {
+    //     .el-input {
+    //         // width: 165px;
+    //         // width: 30%;
+    //         .el-input__prefix {
+    //             display: none;
+    //         }
+    //     }
+
+    //     .el-input--prefix .el-input__inner {
+    //         padding-left: 10px;
+    //     }
+    // }
+
+    .el-autocomplete,.el-input,.el-select {
+        width: 100%;
+    }
+
+    .el-input--small .el-input__inner {
+        height: 28px;
+        line-height: 28px;
+    }
+
+    .allergyItemRow {
+       margin-bottom: 5px;
+       display: flex;
+    }
+
+    .allergyRow {
+        margin-right: 12px;
+    }
+
+    .el-button+.el-button {
+        margin-left: 2px;
+    }
+
+    .allergyRow-groupBtn {
+        display: inline-block;
+        padding: 0 10px;
+        height:28px;
+        position: relative;
+        top: 4px;
+        background:rgba(219,219,219,0.29);
+        img {
+            vertical-align: middle;
+            position: relative;
+            top:-5px
+        }
+    }
+}

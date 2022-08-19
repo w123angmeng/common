@@ -1,0 +1,293 @@
+.testApplyCommon {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+
+    .testApply_btns {
+        position: absolute;
+        right: 10px;
+        bottom: 20px;
+    }
+
+    .testLeftCommon {
+        width: 289px;
+        height: 100%;
+        padding: 16px;
+        border-right: 2px solid #e3e5e8;
+        overflow-x: hidden;
+        box-sizing: border-box;
+
+        .itemTestApply {
+            height: 116px;
+            background: #F7F7F9;
+            border-radius: 4px;
+            margin-bottom: 8px;
+            padding: 12px;
+            font-family: PingFang SC;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 20px;
+            color: #8C8C8C;
+            border: 1px solid #F7F7F9;
+            box-sizing: border-box;
+            position: relative;
+
+            .el-divider--vertical {
+                margin: 0px;
+            }
+
+            &.curApply {
+                background: #ECF5FF;
+                border: 1px solid #1890FF;
+            }
+
+            &:hover {
+                border: 1px solid #1890FF;
+            }
+           
+            .fRow {
+                padding-bottom: 3px;
+                &.f1 {
+                    color: #8C8C8C;
+                }
+                &.fRow1 {
+                    width: 240px;
+                }
+            }
+         
+            .st {
+                position: absolute;
+                left: 185px;
+                top: 12px;
+                &.c189{
+                    color: #1890FF;
+                }
+                &.cOrange{
+                    color: #E6A23C;
+                }
+                &.cpink{
+                    color: #E6488A;
+                }
+                &.cgreen{
+                    color: #67C23A;
+                }
+            }
+        }
+
+        .simpleImgSvg {
+            position: absolute;
+            top:50%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%,-50%);
+        }
+    }
+
+    .testApplyContent_wrap {
+        width: calc(100% - 292px);
+        display: flex;
+        height: 100%;
+
+        .testMiddleCommon {
+            width: calc(100% - 306px);
+            height: 100%;
+            padding: 16px;
+            box-sizing: border-box;
+            position: relative;
+    
+            .searchArea {
+                display: flex;
+                width: 100%;
+                .searchTestName {
+                    width: 224px;
+                    .el-select, .el-input {
+                        width: 100%;
+                    }
+                }
+        
+                .inspectCheckbox {
+                    display: flex;
+                    padding-right: 5px;
+                    padding-left: 20px;
+                    height: 32px;
+                    line-height: 32px;
+                    justify-content: flex-end;
+        
+                    .el-checkbox {
+                        margin-right: 10px;
+                    }
+                }
+            }
+    
+            .outpTestContent {
+                display: flex;
+                margin-top: 15px;
+                height: 100%;
+                width: 100%;
+
+                .showGcp {
+                    font-size: 14px;
+                    font-family: ArialMT;
+                    padding: 2px 5px;
+                    width: 45px;
+                    height: 24px;
+                    line-height: 24px;
+                    border-radius: 2px;
+                    box-sizing: border-box; 
+                    cursor: pointer;
+                    &.gcpFlagAtm {
+                        color: #1890FF;
+                        background: #CEE8FF;
+                    }
+                    &.unGcpFlagAtm {
+                        color: #BDBDBD;
+                        background: #EEEEEE;
+                    }
+                }
+
+                .outpTestTree {
+                    height: 100%;
+                    .el-tree-node__content {
+                        padding-left: 0px !important;
+                    }
+                    .testTreeDatas {
+                        width: 128px;
+                        padding-right:16px;
+                        height: calc(100% - 110px) !important;
+                        overflow-y: auto;
+                        box-sizing: border-box;
+                        box-shadow: inset -1px 0px 0px #F0F0F0;
+                    }
+                    .testTreeDatas::-webkit-scrollbar {
+                        // width: 0;
+                    }
+                }
+
+                .outpApplytableCont_wrap {
+                    width: calc(100% - 130px);
+
+                    .outpApplytable_wrap {
+                        width: 100%;
+                        padding-left: 16px;
+                        height: calc(100% - 151px) !important;
+                        overflow-y: auto;
+                        box-sizing: border-box;
+                        .tableComs {
+                            width: 100%;
+                            .el-table .cell {
+                                padding-left: 0px;
+                                padding-right: 0px;
+                            }
+                        }
+                        .el-select {
+                            width: 100px;
+                        }
+                        
+                    }
+                }
+            }
+        }
+        .testRightCommon {
+            height: 100%;
+            width: 300px !important;
+            padding: 16px;
+            padding-right: 0px;
+            border-left: 2px solid #e3e5e8;
+            box-sizing: border-box;
+    
+            .itemTests {
+                max-width: 100%;
+                height: 32px;
+                line-height: 28px;
+                font-family: PingFang SC;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 14px;
+                margin-bottom: 8px;
+                padding-left: 0px;
+                padding-top: 0px !important;
+            }
+
+            .el-tag--small {
+                padding-top: 0px !important;
+            }
+
+            .el-tag .el-icon-close {
+                border-radius: 50%;
+                text-align: center;
+                position: relative;
+                cursor: pointer;
+                font-size: 12px;
+                height: 16px;
+                width: 16px;
+                line-height: 16px;
+                vertical-align: middle;
+                top: 1px;
+                right: -5px;
+            }
+
+            .itemTags {
+                position: relative;
+                .outp_gcp {
+                    position: absolute;
+                    width: 38px;
+                    height: 36px;
+                    left: 0px;
+                    top: -3px;
+                }
+            }
+        }
+
+        .indicationsCom .nameInfodetailed {
+            top: 0px;
+        }
+    }
+   
+    .testTitle {
+        font-family: PingFang SC;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        color: #262626;
+        padding-bottom: 10px;
+        position: relative;
+
+        .testAddBtn {
+            position: absolute;
+            right: 5px;
+            top: -4px;
+        }
+    }
+
+    .ellipsis{
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        vertical-align: middle;
+    }
+
+    .ellipsis1 {
+        display: inline-block;
+        max-width: 240px;
+        position: relative;
+    }
+
+    .testSroll_wrap {
+        height: 92%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        position: relative;
+    }
+
+    .testSroll_wrap::-webkit-scrollbar {
+        width: 5px;
+    }
+      
+    .testSroll_wrap::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background: rgba(80, 79, 79, 0.2);
+    }
+}

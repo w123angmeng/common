@@ -1,0 +1,57 @@
+.AppointRecord {
+    background: #fff;
+    min-height: 100%;
+    .searchContent {
+        padding: 16px 0 0;
+        display: flex;
+        width: 100%;
+        .hander-box {
+            width: calc(100% - 200px);
+            span {
+                display: inline-block;
+            }
+        }
+        .recBtns {
+            width: 170px;
+            margin-left: 20px;
+        }
+        .labelTitle {
+            font-size: 14px;
+            margin-right: 16px;
+            margin-left:16px;
+            font-family:PingFangSC-Regular,PingFang SC;
+            font-weight:400;
+            color:rgba(0,0,0,0.65);
+            display: inline-block;
+        }
+        .w120 {
+            width:160px!important;
+        }
+        .w240 {
+            width:225px!important;
+        }
+    }
+    .tableContent {
+        overflow: hidden;
+        width: calc( 100% - 32px);
+        margin: 0 16px;
+    }
+    .paginationContant {
+        padding: 30px 16px 30px 0;
+        text-align: right;
+        .el-pagination {
+            margin-right: 0 !important;
+            margin-top: 0 !important;
+        }
+    }
+    .w120,.w240 {
+        margin-bottom: 15px;
+    }
+    .w120 {
+        width:120px;
+    }
+    .w240 {
+        width:240px;
+    }
+    
+    }

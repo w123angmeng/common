@@ -1,0 +1,126 @@
+.inspectRight{
+    position: relative;
+    width: calc(100% - 590px);
+    // flex: 1;
+    padding: 16px;
+    .title{
+        font-weight: 500;
+        margin-bottom: 16px;
+    }
+    .el-checkbox{
+        margin-right: 0px;
+        &+.el-checkbox{
+            margin-right: 0;
+        }
+    }
+    .el-form-item{
+        margin-bottom: 16px;
+        width: 100%;
+        /deep/ .el-form-item__content {
+            width: calc(100% - 74px);
+        }
+        &.form_diff{
+            width: calc(100% - 150px);
+            /deep/ .el-form-item__content{
+                .el-autocomplete{
+                    width: 100%;
+                }
+            }
+        }
+        &.form_diff.bedsideFlag {
+            width: calc(100% - 220px);
+            /deep/ .el-autocomplete{
+                    width: calc(100% - 280px);
+                }
+                .el-select{
+                    width: 170px;
+                }
+        }
+       
+        &.form_autow {
+            width: auto;
+            
+        }
+        &.form_autow_last {
+            margin-right: 0px;
+            /deep/ .el-checkbox {
+                margin-right: 0;
+            }
+        }
+    }
+
+    
+
+    /deep/ .inspect_tableWrap {
+        padding: 12px;
+        padding-bottom: 12px;
+        background: #F7F7F9;
+        border-radius: 4px;
+
+        .showGcp {
+            font-size: 14px;
+            font-family: ArialMT;
+            padding: 2px 5px;
+            width: 45px;
+            height: 24px;
+            line-height: 24px;
+            border-radius: 2px;
+            box-sizing: border-box; 
+            cursor: pointer;
+            &.gcpFlagAtm {
+                color: #1890FF;
+                background: #CEE8FF;
+            }
+            &.unGcpFlagAtm {
+                color: #BDBDBD;
+                background: #EEEEEE;
+            }
+        }
+       
+        /deep/ .el-form-item__error {
+            display: inline-block !important;
+            width: 160px !important;
+            position: absolute;
+            left: 60px;
+            top: 11px;
+        }
+        /deep/ .el-form-item--small.el-form-item {
+            margin-bottom: 3px;
+        }
+        
+        .el-input--small .el-input__inner {
+            padding: 8px 5px;
+            padding-left: 10px;
+        }
+    }
+
+    /deep/ .csVoList {
+        overflow-y: scroll;
+    }
+
+    .clinicTable{
+        font-size: 14px;
+        max-height: calc(100% - 250px);
+        overflow-y: scroll;
+        /deep/ td{
+            padding: 4px 0;
+        }
+        &.el-table /deep/ .cell{
+            padding-left: 16px;
+        }
+    }
+    .inspect_indications {
+        margin-top: 11px;
+    }
+    .inspect_bottom{
+        position: absolute;
+        bottom: 20px;
+        width: calc(100% - 32px);
+        margin-top: 16px;
+        justify-content: flex-end;
+        .inspect_bottom_right {
+            width: 170px;
+            text-align: right;
+        }
+    }
+}

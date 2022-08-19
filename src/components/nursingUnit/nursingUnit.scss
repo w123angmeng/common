@@ -1,0 +1,41 @@
+ .nursingUnit {
+     width: 588px;
+     height: 235px;
+     background: #ffffff;
+     .nurDepartBox {
+         width: 100%;
+         height: 30px;
+         margin-top: 16px;
+         margin-bottom: 114px;
+         padding-left: 24px;
+         .unitSelect {
+             width: 434px;
+             // margin-left: 22px;
+             // margin-bottom: 114px;
+         }
+         .el-form-item__error {
+             margin-left: 117px;
+         }
+     }
+     .footer-div {
+         .btn {
+             width: 90px;
+             height: 30px;
+             display: block;
+             text-align: center;
+             background: #5280FE;
+             padding: 5px 15px;
+             font-size: 14px;
+             float: right;
+             margin-right: 24px;
+         }
+         .diaLogBtn {
+             background: #5280FE;
+             color: #ffffff;
+         }
+         .diaLogBack {
+             background: #ffffff;
+             border: 1px solid #5280FE;
+         }
+     }
+ }

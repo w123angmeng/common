@@ -1,0 +1,65 @@
+.inputNumModel {
+    width: 74px;
+    position: relative;
+    display: inline-block;
+    height: 24px;
+    z-index: 1;
+    line-height: 1;
+    .el-input--small{
+        line-height: 1;
+    }
+    &:hover {
+        input {
+            border-color: #1890FF;
+        }
+    }
+   .el-input {
+        height: 24px;
+        .el-input__inner {
+            height: 24px;
+            line-height: 24px;
+            border-radius: 4px;
+            padding: 0 24px;
+            text-align: center;
+        }
+    }
+    span {
+        background: #F5F7FA;
+        width: 22px;
+        height: 22px;
+        line-height: 10px;
+        padding: 5px 0 7px;
+        box-sizing: border-box;
+        color: #606266;
+        display: block;
+        cursor: pointer;
+        font-size: 12px;
+        position: absolute;
+        top: 1px;
+        text-align: center;
+        z-index: 10;
+        &.isDisabled {
+            color: #C0C4CC;
+            cursor: not-allowed;
+        }
+        &.addBtn {
+            right: 1px;
+            border-left: 1px solid #DCDFE6;
+            border-radius: 0 4px 4px 0;
+        }
+        &.reduceBtn {
+            left: 1px;
+            border-right: 1px solid #DCDFE6;
+            border-radius: 4px 0px 0px 4px;
+        }
+        &:hover {
+            color: #8cc5ff;
+        }
+    }
+    　-moz-user-select: none; /*火狐*/
+    -webkit-user-select: none; /*webkit浏览器*/
+    -ms-user-select: none; /*IE10*/
+    -khtml-user-select: none; /*早期浏览器*/
+    user-select: none;
+
+}
